@@ -2,6 +2,16 @@ SocialReader::Application.routes.draw do
 
   devise_for :users
 
+  match "profiles/:id", :to => "profiles#view", :as => :view_profiles
+
+  match "works/", :to => "works#find", :as => :find_works
+  match "works/:id/home/", :to => "works#home"
+
+  get "works/section"
+
+
+
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:

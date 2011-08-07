@@ -303,6 +303,28 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
+/* line 52, ../../app/stylesheets/partials/_page.scss */
+body {
+  background: #505050;
+  padding: 30px 100px;
+}
+
+/* line 57, ../../app/stylesheets/partials/_page.scss */
+#container {
+  background: white;
+  padding: 20px;
+  -moz-box-shadow: black 5px 5px 20px;
+  -webkit-box-shadow: black 5px 5px 20px;
+  -o-box-shadow: black 5px 5px 20px;
+  box-shadow: black 5px 5px 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {
