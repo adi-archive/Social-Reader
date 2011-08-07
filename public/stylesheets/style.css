@@ -303,11 +303,6 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 49, ../../app/stylesheets/partials/_page.scss */
-body {
-  color: red;
-}
-
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {
