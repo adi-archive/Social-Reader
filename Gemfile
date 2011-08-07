@@ -15,6 +15,8 @@ gem "devise", "1.3.4"
 gem "compass"
 gem "html5-boilerplate"
 
+gem "heroku"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
