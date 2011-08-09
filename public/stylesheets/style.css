@@ -303,26 +303,73 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 52, ../../app/stylesheets/partials/_page.scss */
+/* line 63, ../../app/stylesheets/partials/_page.scss */
+#header {
+  padding-bottom: 0;
+  height: 45px;
+  line-height: 45px;
+  background: #008500;
+}
+
+/* line 70, ../../app/stylesheets/partials/_page.scss */
+#header .logo a {
+  padding: 0 20px;
+  vertical-align: middle;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  float: left;
+}
+
+/* line 80, ../../app/stylesheets/partials/_page.scss */
+#header nav {
+  float: right;
+}
+
+/* line 84, ../../app/stylesheets/partials/_page.scss */
+#header nav a {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* line 91, ../../app/stylesheets/partials/_page.scss */
+#header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 96, ../../app/stylesheets/partials/_page.scss */
+#header a:hover {
+  background-color: #00cc00;
+}
+
+/* line 100, ../../app/stylesheets/partials/_page.scss */
 body {
   background: #505050;
   padding: 30px 100px;
 }
 
-/* line 57, ../../app/stylesheets/partials/_page.scss */
+/* line 105, ../../app/stylesheets/partials/_page.scss */
 #container {
   background: white;
-  padding: 20px;
   -moz-box-shadow: black 5px 5px 20px;
   -webkit-box-shadow: black 5px 5px 20px;
   -o-box-shadow: black 5px 5px 20px;
   box-shadow: black 5px 5px 20px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
+}
+
+/* line 112, ../../app/stylesheets/partials/_page.scss */
+#main {
+  padding: 20px;
+}
+
+/* line 116, ../../app/stylesheets/partials/_page.scss */
+footer {
+  padding: 20px;
+  padding-top: 0;
 }
 
 /*/mediaquery*/
