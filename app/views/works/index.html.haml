@@ -1,2 +1,4 @@
-%h1 Works#all
-%p Find me in app/views/works/all.html.haml
+%h1{:class => "pageName"} All Works
+- Work.all.each do |work|
+  %div
+    = render :partial => "works/work_result", :locals => { :work => work }

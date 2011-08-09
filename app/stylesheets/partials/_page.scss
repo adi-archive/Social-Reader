@@ -103,12 +103,15 @@ body {
   padding: 30px 100px;
 }
 
+.pageName {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
 #container {
   background: $container-background-color;
   @include box-shadow(black 5px 5px 20px);
 }
-
-header {}
 
 #main {
   padding: 20px;

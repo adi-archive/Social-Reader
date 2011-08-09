@@ -7,7 +7,6 @@ class WorksController < ApplicationController
 
   # find a work
   def index
-
   end
 
   def create
