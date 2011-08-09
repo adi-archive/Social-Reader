@@ -1,5 +1,7 @@
 class WorksController < ApplicationController
 
+  load_and_authorize_resource
+
   # show specific work
   def show 
     @work = Work.find(params[:id])
@@ -13,6 +15,7 @@ class WorksController < ApplicationController
   end
 
   def edit
+    # @work = Work.find(params[:id])
   end
 
   def update
