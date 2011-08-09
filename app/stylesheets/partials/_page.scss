@@ -54,10 +54,11 @@ $logo-color: white;
 
 // green header scheme
 $header-background-color: #008500;
-$header-hover-background-color: #29AA29; //#00CC00
+$header-hover-background-color: #269926; //#00CC00
 $header-height: 45px;
 
 $body-background-color: #505050;
+$container-background-color: #FAFAFA;
 // $body-background-color: #3D3D3D; // darker
 
 #header {
@@ -103,7 +104,7 @@ body {
 }
 
 #container {
-  background: white;
+  background: $container-background-color;
   @include box-shadow(black 5px 5px 20px);
 }
 
