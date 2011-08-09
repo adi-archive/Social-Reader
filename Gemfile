@@ -10,7 +10,9 @@ gem "mongoid-rspec", "1.4.2", :group => :test
 gem "factory_girl_rails", "1.1.beta1", :group => :test
 gem "bson_ext", "1.3.1"
 gem "mongoid", "2.0.2"
+
 gem "devise", "1.3.4"
+gem "cancan"
 
 gem "compass"
 gem "html5-boilerplate"

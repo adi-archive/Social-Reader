@@ -1,6 +1,6 @@
 %h1{:class => "logo"} SocialReader
 %nav
-  %a{:href => find_works_path} Find Works
+  %a{:href => works_path} Find Works
   - if current_user
     %a{:href => view_profiles_path(current_user.id)} View Your Profile
     = link_to('Logout', destroy_user_session_path)
