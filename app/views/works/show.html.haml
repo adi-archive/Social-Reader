@@ -1,2 +1,14 @@
-%h1= @work.title
-%h2= @work.get_byline
+%h1{:class => "pageName"} #{@work.title}
+- if current_user.try(:admin?) # try so we fail gracefully if logged out
+  = link_to('[edit]', edit_work_path(@work), {:class => 'editLink'})
+%h2{:class => "pageSubtitle"} #{get_byline(@work)}
+
+%h2 Sections
+-if @work.sections.empty?
+  %div
+    There are no sections for this work yet.
+- else
+  %ul
+    - @work.sections.asc(:position).each do |section|
+      %li
+        = render :partial => "sections/section_result", :locals => { :section => section, :work => @work}

@@ -1,0 +1,16 @@
+= form_for @work do |f|
+  %div
+    = f.label :title
+    = f.text_field :title
+  %div
+    -# TODO - don't make this a text field
+    = f.label :authors
+    = f.text_field :authors
+  %div
+    = f.label :isbn
+    = f.text_field :isbn
+  %div
+    = f.label :amazon_url
+    = f.text_field :amazon_url
+  -# TODO - add sections
+  = submit_tag "Submit"

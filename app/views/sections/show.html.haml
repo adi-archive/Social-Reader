@@ -1,0 +1,13 @@
+%h1{:class => "pageName"} #{@work}
+%h2 #{@section}
+#sectionWrapper
+  #sectionAnnotations
+  #sectionContent
+    - @section.lines.each do |line|
+      - if @section.form == "verse"
+        -# TODO: convert to constant
+        %div{:class => "verseLine"}
+          #{line}
+      - else #prose
+        %div{:class => "proseLine"}
+          #{line}

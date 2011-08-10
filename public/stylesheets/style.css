@@ -303,7 +303,7 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 64, ../../app/stylesheets/partials/_page.scss */
+/* line 69, ../../app/stylesheets/partials/_page.scss */
 #header {
   padding-bottom: 0;
   height: 45px;
@@ -311,7 +311,7 @@ input:invalid, textarea:invalid {
   background: #008500;
 }
 
-/* line 71, ../../app/stylesheets/partials/_page.scss */
+/* line 76, ../../app/stylesheets/partials/_page.scss */
 #header .logo a {
   padding: 0 20px;
   vertical-align: middle;
@@ -322,12 +322,12 @@ input:invalid, textarea:invalid {
   float: left;
 }
 
-/* line 81, ../../app/stylesheets/partials/_page.scss */
+/* line 86, ../../app/stylesheets/partials/_page.scss */
 #header nav {
   float: right;
 }
 
-/* line 85, ../../app/stylesheets/partials/_page.scss */
+/* line 90, ../../app/stylesheets/partials/_page.scss */
 #header nav a {
   display: inline-block;
   font-size: 15px;
@@ -335,30 +335,40 @@ input:invalid, textarea:invalid {
   padding: 0 10px;
 }
 
-/* line 92, ../../app/stylesheets/partials/_page.scss */
+/* line 97, ../../app/stylesheets/partials/_page.scss */
 #header a {
   color: white;
   text-decoration: none;
 }
 
-/* line 97, ../../app/stylesheets/partials/_page.scss */
+/* line 102, ../../app/stylesheets/partials/_page.scss */
 #header a:hover {
   background-color: #269926;
 }
 
-/* line 101, ../../app/stylesheets/partials/_page.scss */
+/* line 106, ../../app/stylesheets/partials/_page.scss */
 body {
   background: #505050;
   padding: 30px 100px;
 }
 
-/* line 106, ../../app/stylesheets/partials/_page.scss */
-.pageName {
-  font-size: 20px;
-  padding-bottom: 10px;
+/* line 111, ../../app/stylesheets/partials/_page.scss */
+#flash .success {
+  padding: 10px;
+  margin: 10px 0;
+  background: #d8fca5;
+  border: 3px solid green;
 }
 
-/* line 111, ../../app/stylesheets/partials/_page.scss */
+/* line 118, ../../app/stylesheets/partials/_page.scss */
+#flash .error {
+  padding: 10px;
+  margin: 10px 0;
+  background: #ff7373;
+  border: 3px solid red;
+}
+
+/* line 126, ../../app/stylesheets/partials/_page.scss */
 #container {
   background: #fafafa;
   -moz-box-shadow: black 5px 5px 20px;
@@ -367,12 +377,69 @@ body {
   box-shadow: black 5px 5px 20px;
 }
 
-/* line 116, ../../app/stylesheets/partials/_page.scss */
-#main {
-  padding: 20px;
+/* line 131, ../../app/stylesheets/partials/_page.scss */
+h1 {
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 
-/* line 120, ../../app/stylesheets/partials/_page.scss */
+/* line 136, ../../app/stylesheets/partials/_page.scss */
+h2 {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+/* line 141, ../../app/stylesheets/partials/_page.scss */
+.pageName {
+  display: inline-block;
+}
+
+/* line 145, ../../app/stylesheets/partials/_page.scss */
+.editLink {
+  vertical-align: top;
+  font-size: 10px;
+}
+
+/* line 150, ../../app/stylesheets/partials/_page.scss */
+.pageSubtitle {
+  display: inline-block;
+}
+
+/* line 154, ../../app/stylesheets/partials/_page.scss */
+#main {
+  padding: 15px 3%;
+}
+
+/* line 158, ../../app/stylesheets/partials/_page.scss */
+form label {
+  display: inline-block;
+  width: 100px;
+}
+
+/* line 163, ../../app/stylesheets/partials/_page.scss */
+form div {
+  padding-bottom: 30px;
+}
+
+/* line 167, ../../app/stylesheets/partials/_page.scss */
+#sectionContent {
+  width: 60%;
+}
+
+/* line 171, ../../app/stylesheets/partials/_page.scss */
+#sectionAnnotations {
+  float: right;
+  width: 35%;
+  height: 1000px;
+  background: gray;
+}
+
+/* line 178, ../../app/stylesheets/partials/_page.scss */
+.verseLine {
+  padding-bottom: 10px;
+}
+
+/* line 182, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px;
   padding-top: 0;

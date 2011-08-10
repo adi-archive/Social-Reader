@@ -1,10 +1,11 @@
+require 'json'
+
 class WorksController < ApplicationController
 
   load_and_authorize_resource
 
   # show specific work
   def show 
-    @work = Work.find(params[:id])
   end
 
   # find a work
@@ -15,10 +16,15 @@ class WorksController < ApplicationController
   end
 
   def edit
-    # @work = Work.find(params[:id])
   end
 
   def update
+    @work.title = params[:work][:title]
+    @work.isbn = params[:work][:isbn]
+    @work.amazon_url = params[:work][:amazon_url]
+    @work.save!
+    flash[:success] = "Work updated successfully!"
+    redirect_to work_path(@work)
   end
 
   def destroy

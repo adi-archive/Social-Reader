@@ -59,7 +59,12 @@ $header-height: 45px;
 
 $body-background-color: #505050;
 $container-background-color: #FAFAFA;
-// $body-background-color: #3D3D3D; // darker
+// $body-background-color: #3D3D3D; // darker gray
+
+$error-flash-background-color: #FF7373; // light red
+$error-flash-outline-color: red;
+$success-flash-background-color: #D8FCA5; // light green
+$success-flash-outline-color: green;
 
 #header {
   padding-bottom: 0;
@@ -103,18 +108,75 @@ body {
   padding: 30px 100px;
 }
 
-.pageName {
-  font-size: 20px;
-  padding-bottom: 10px;
+#flash .success {
+  padding: 10px;
+  margin: 10px 0;
+  background: $success-flash-background-color;
+  border: 3px solid $success-flash-outline-color; 
 }
+
+#flash .error {
+  padding: 10px;
+  margin: 10px 0;
+  background: $error-flash-background-color;
+  border: 3px solid $error-flash-outline-color; 
+}
+
 
 #container {
   background: $container-background-color;
   @include box-shadow(black 5px 5px 20px);
 }
 
+h1 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.pageName {
+  display: inline-block;
+}
+
+.editLink {
+  vertical-align: top;
+  font-size: 10px;
+}
+
+.pageSubtitle {
+  display: inline-block;
+}
+
 #main {
-  padding: 20px;
+  padding: 15px 3%;
+}
+
+form label {
+  display: inline-block;
+  width: 100px;
+}
+
+form div {
+  padding-bottom: 30px;
+}
+
+#sectionContent {
+  width: 60%;
+}
+
+#sectionAnnotations {
+  float: right;
+  width: 35%;
+  height: 1000px;
+  background: gray;
+}
+
+.verseLine {
+  padding-bottom: 10px;
 }
 
 footer {

@@ -2,7 +2,11 @@ SocialReader::Application.routes.draw do
 
   match "profiles/:id", :to => "profiles#view", :as => :view_profiles
 
-  resources :works
+  resources :authors
+
+  resources :works do
+    resources :sections
+  end
 
   # get "works/section"
   devise_for :users

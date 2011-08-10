@@ -1,0 +1,4 @@
+%h1{:class => "pageName"} All Authors
+- Author.all.each do |author|
+  %div
+    = render :partial => "authors/author_result", :locals => { :author => author }

@@ -1,0 +1,6 @@
+%h1{:class => "pageName"} #{@author}
+- if current_user.try(:admin?) # try so we fail gracefully if logged out
+  = link_to('[edit]', edit_author_path(@author), {:class => 'editLink'})
+-#
+  - @author.works.each do |work|
+    = link_to(work, work_path(work)
