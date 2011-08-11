@@ -21,11 +21,14 @@ class Section
   VERSE = 'verse'
   PROSE = 'prose'
   before_save do
+=begin
     if form == VERSE
       lines_text = raw_text.split("\n")
     else #form == PROSE
       lines_text = wrap_text(raw_text).split("\n")
     end
+=end
+    lines_text = raw_text.split("\n")
     self.lines = []
     line_number = 0
     lines_text.each_index do |i|
@@ -40,9 +43,11 @@ class Section
     end
   end
 
+=begin
   def wrap_text(txt, col = 80)
     txt.gsub(/(.{1,#{col}})( +|$\n?)|(.{1,#{col}})/, "\\1\\3\n")
   end
+=end
 
   def form_fits_enum
     return form == VERSE || form == PROSE

@@ -69,6 +69,9 @@ $success-flash-outline-color: green;
 $section-annotations-color: #868282;
 $section-annotations-hover-color: #B2ACAC;
 
+$main-top-bottom-margin: 15px;
+$main-left-right-margin: 30px;
+
 #header {
   padding-bottom: 0;
   height: $header-height;
@@ -155,7 +158,7 @@ h2 {
 }
 
 #main {
-  padding: 15px 3%;
+  padding: $main-top-bottom-margin $main-left-right-margin;
 }
 
 form label {
@@ -167,14 +170,18 @@ form div {
   padding-bottom: 30px;
 }
 
-#sectionContent {
-  width: 60%;
+// sectionText and sectionAnnotations widths add up to 100% - then the margin
+// between them (regardless of the size of the window) is equal to the
+// negative margin-right of the section Annotations.
+#sectionText {
+  width: 65%;
 }
 
 #sectionAnnotations {
+  margin-top: -$main-top-bottom-margin;
+  margin-right: -$main-left-right-margin;
   float: right;
   width: 35%;
-  height: 1000px;
   background: $section-annotations-color;
 }
 #sectionAnnotations:hover {

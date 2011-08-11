@@ -1,13 +1,15 @@
-%h1{:class => "pageName"} #{@work}
-%h2 #{@section}
-#sectionWrapper
+#sectionWrapper{:class => "jsClearfix"}
   #sectionAnnotations
   #sectionContent
-    - @section.lines.each do |line|
-      - if @section.form == "verse"
-        -# TODO: convert to constant
-        %div{:class => "verseLine"}
-          #{line}
-      - else #prose
-        %div{:class => "proseLine"}
-          #{line}
+    #sectionHeader
+      %h1{:class => "pageName"} #{link_to(@work, work_path(@work))}
+      %h2 #{@section}
+    #sectionText
+      - @section.lines.each do |line|
+        - if @section.form == "verse"
+          -# TODO: convert to constant
+          %div{:class => "verseLine"}
+            #{line}
+        - else #prose
+          %div{:class => "proseLine"}
+            #{line}
