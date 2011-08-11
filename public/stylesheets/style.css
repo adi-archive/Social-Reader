@@ -169,21 +169,21 @@ button::-moz-focus-inner {
 
 /* line 99, ../../../../../.rvm/gems/ruby-1.9.2-p290@socialreader/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 ::-moz-selection {
-  background: #ff5e99;
+  background: lightBlue;
   color: white;
   text-shadow: none;
 }
 
 /* line 100, ../../../../../.rvm/gems/ruby-1.9.2-p290@socialreader/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 ::selection {
-  background: #ff5e99;
+  background: lightBlue;
   color: white;
   text-shadow: none;
 }
 
 /* line 105, ../../../../../.rvm/gems/ruby-1.9.2-p290@socialreader/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 a:link {
-  -webkit-tap-highlight-color: #ff5e99;
+  -webkit-tap-highlight-color: lightBlue;
 }
 
 /* line 118, ../../../../../.rvm/gems/ruby-1.9.2-p290@socialreader/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
