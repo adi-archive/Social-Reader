@@ -66,6 +66,9 @@ $error-flash-outline-color: red;
 $success-flash-background-color: #D8FCA5; // light green
 $success-flash-outline-color: green;
 
+$section-annotations-color: #868282;
+$section-annotations-hover-color: #B2ACAC;
+
 #header {
   padding-bottom: 0;
   height: $header-height;
@@ -172,7 +175,10 @@ form div {
   float: right;
   width: 35%;
   height: 1000px;
-  background: gray;
+  background: $section-annotations-color;
+}
+#sectionAnnotations:hover {
+  background: $section-annotations-hover-color;
 }
 
 .verseLine {

@@ -1,4 +1,9 @@
 %h1{:class => "pageName"} All Authors
-- Author.all.each do |author|
+- if Author.all.empty?
   %div
+    There are no authors yet.
+- else
+  - Author.all.each do |author|
+    %div
     = render :partial => "authors/author_result", :locals => { :author => author }
+

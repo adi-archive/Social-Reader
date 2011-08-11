@@ -1,4 +1,8 @@
 %h1{:class => "pageName"} All Works
-- Work.all.each do |work|
+- if Work.all.empty?
   %div
-    = render :partial => "works/work_result", :locals => { :work => work }
+    There are no works yet.
+- else
+  -Work.all.each do |work|
+    %div
+      = render :partial => "works/work_result", :locals => { :work => work }

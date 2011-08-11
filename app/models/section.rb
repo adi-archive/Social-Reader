@@ -16,11 +16,10 @@ class Section
   validates_presence_of :position
   validates_presence_of :raw_text
 
-  attr_accessible :name, :lines
+  attr_accessible :name, :lines, :position, :raw_text, :form
 
   VERSE = 'verse'
   PROSE = 'prose'
-
   before_save do
     if form == VERSE
       lines_text = raw_text.split("\n")
@@ -52,5 +51,4 @@ class Section
   def to_s
     return name
   end
-
 end
