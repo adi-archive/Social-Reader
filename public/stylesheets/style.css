@@ -303,7 +303,18 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 75, ../../app/stylesheets/partials/_page.scss */
+/* line 81, ../../app/stylesheets/partials/_page.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 85, ../../app/stylesheets/partials/_page.scss */
+ul, li {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 90, ../../app/stylesheets/partials/_page.scss */
 #header {
   padding-bottom: 0;
   height: 45px;
@@ -311,7 +322,7 @@ input:invalid, textarea:invalid {
   background: #008500;
 }
 
-/* line 82, ../../app/stylesheets/partials/_page.scss */
+/* line 97, ../../app/stylesheets/partials/_page.scss */
 #header .logo a {
   padding: 0 20px;
   vertical-align: middle;
@@ -322,12 +333,12 @@ input:invalid, textarea:invalid {
   float: left;
 }
 
-/* line 92, ../../app/stylesheets/partials/_page.scss */
+/* line 107, ../../app/stylesheets/partials/_page.scss */
 #header nav {
   float: right;
 }
 
-/* line 96, ../../app/stylesheets/partials/_page.scss */
+/* line 111, ../../app/stylesheets/partials/_page.scss */
 #header nav a {
   display: inline-block;
   font-size: 15px;
@@ -335,24 +346,24 @@ input:invalid, textarea:invalid {
   padding: 0 10px;
 }
 
-/* line 103, ../../app/stylesheets/partials/_page.scss */
+/* line 118, ../../app/stylesheets/partials/_page.scss */
 #header a {
   color: white;
   text-decoration: none;
 }
 
-/* line 108, ../../app/stylesheets/partials/_page.scss */
+/* line 123, ../../app/stylesheets/partials/_page.scss */
 #header a:hover {
   background-color: #269926;
 }
 
-/* line 112, ../../app/stylesheets/partials/_page.scss */
+/* line 127, ../../app/stylesheets/partials/_page.scss */
 body {
   background: #505050;
-  padding: 30px 100px;
+  padding: 2.5% 8%;
 }
 
-/* line 117, ../../app/stylesheets/partials/_page.scss */
+/* line 132, ../../app/stylesheets/partials/_page.scss */
 #flash .success {
   padding: 10px;
   margin: 10px 0;
@@ -360,7 +371,7 @@ body {
   border: 3px solid green;
 }
 
-/* line 124, ../../app/stylesheets/partials/_page.scss */
+/* line 139, ../../app/stylesheets/partials/_page.scss */
 #flash .error {
   padding: 10px;
   margin: 10px 0;
@@ -368,7 +379,7 @@ body {
   border: 3px solid red;
 }
 
-/* line 132, ../../app/stylesheets/partials/_page.scss */
+/* line 147, ../../app/stylesheets/partials/_page.scss */
 #container {
   background: #fafafa;
   -moz-box-shadow: black 5px 5px 20px;
@@ -377,75 +388,95 @@ body {
   box-shadow: black 5px 5px 20px;
 }
 
-/* line 137, ../../app/stylesheets/partials/_page.scss */
+/* line 152, ../../app/stylesheets/partials/_page.scss */
 h1 {
   font-size: 20px;
   padding-bottom: 5px;
 }
 
-/* line 142, ../../app/stylesheets/partials/_page.scss */
+/* line 157, ../../app/stylesheets/partials/_page.scss */
 h2 {
   font-size: 15px;
   padding-bottom: 5px;
 }
 
-/* line 147, ../../app/stylesheets/partials/_page.scss */
+/* line 162, ../../app/stylesheets/partials/_page.scss */
 .pageName {
   display: inline-block;
 }
 
-/* line 151, ../../app/stylesheets/partials/_page.scss */
+/* line 166, ../../app/stylesheets/partials/_page.scss */
 .editLink {
   vertical-align: top;
   font-size: 10px;
 }
 
-/* line 156, ../../app/stylesheets/partials/_page.scss */
+/* line 171, ../../app/stylesheets/partials/_page.scss */
 .pageSubtitle {
   display: inline-block;
 }
 
-/* line 160, ../../app/stylesheets/partials/_page.scss */
+/* line 175, ../../app/stylesheets/partials/_page.scss */
 #main {
   padding: 15px 30px;
 }
 
-/* line 164, ../../app/stylesheets/partials/_page.scss */
+/* line 179, ../../app/stylesheets/partials/_page.scss */
 form label {
   display: inline-block;
   width: 100px;
 }
 
-/* line 169, ../../app/stylesheets/partials/_page.scss */
+/* line 184, ../../app/stylesheets/partials/_page.scss */
 form div {
   padding-bottom: 30px;
 }
 
-/* line 176, ../../app/stylesheets/partials/_page.scss */
+/* line 188, ../../app/stylesheets/partials/_page.scss */
+#sectionHeader {
+  padding-bottom: 10px;
+}
+
+/* line 195, ../../app/stylesheets/partials/_page.scss */
 #sectionText {
   width: 65%;
 }
 
-/* line 180, ../../app/stylesheets/partials/_page.scss */
+/* line 199, ../../app/stylesheets/partials/_page.scss */
 #sectionAnnotations {
   margin-top: -15px;
   margin-right: -30px;
   float: right;
   width: 35%;
-  background: #868282;
+  background: #e7f7dc;
 }
 
-/* line 187, ../../app/stylesheets/partials/_page.scss */
+/* line 207, ../../app/stylesheets/partials/_page.scss */
+#sectionAnnotationsContent {
+  margin: 5px 10px;
+}
+
+/* line 211, ../../app/stylesheets/partials/_page.scss */
 #sectionAnnotations:hover {
-  background: #b2acac;
+  background: #e8ffd9;
 }
 
-/* line 191, ../../app/stylesheets/partials/_page.scss */
+/* line 215, ../../app/stylesheets/partials/_page.scss */
+#previousSectionLink {
+  float: left;
+}
+
+/* line 219, ../../app/stylesheets/partials/_page.scss */
+#nextSectionLink {
+  float: right;
+}
+
+/* line 224, ../../app/stylesheets/partials/_page.scss */
 .verseLine {
   padding-bottom: 10px;
 }
 
-/* line 195, ../../app/stylesheets/partials/_page.scss */
+/* line 228, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px;
   padding-top: 0;

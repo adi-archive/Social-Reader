@@ -3,7 +3,7 @@
   %div
     There are no authors yet.
 - else
-  - Author.all.each do |author|
-    %div
-    = render :partial => "authors/author_result", :locals => { :author => author }
-
+  %ul
+    - Author.all.each do |author|
+      %li
+        = render :partial => "authors/author_result", :locals => { :author => author }

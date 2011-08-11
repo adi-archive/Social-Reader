@@ -66,11 +66,26 @@ $error-flash-outline-color: red;
 $success-flash-background-color: #D8FCA5; // light green
 $success-flash-outline-color: green;
 
-$section-annotations-color: #868282;
-$section-annotations-hover-color: #B2ACAC;
+
+$section-annotations-color: #E7F7DC;
+$section-annotations-hover-color: #E8FFD9;
+
+// stronger green highlight: #D3F0C0
+// blacks:
+  // $section-annotations-color: #868282;
+  // $section-annotations-hover-color: #B2ACAC;
 
 $main-top-bottom-margin: 15px;
 $main-left-right-margin: 30px;
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+	margin: 0;
+}
 
 #header {
   padding-bottom: 0;
@@ -111,7 +126,7 @@ $main-left-right-margin: 30px;
 
 body {
   background: $body-background-color;
-  padding: 30px 100px;
+  padding: 2.5% 8%; // 30px 100px;
 }
 
 #flash .success {
@@ -170,6 +185,10 @@ form div {
   padding-bottom: 30px;
 }
 
+#sectionHeader {
+  padding-bottom: 10px;
+}
+
 // sectionText and sectionAnnotations widths add up to 100% - then the margin
 // between them (regardless of the size of the window) is equal to the
 // negative margin-right of the section Annotations.
@@ -184,9 +203,23 @@ form div {
   width: 35%;
   background: $section-annotations-color;
 }
+
+#sectionAnnotationsContent {
+  margin: 5px 10px;
+}
+
 #sectionAnnotations:hover {
   background: $section-annotations-hover-color;
 }
+
+#previousSectionLink {
+  float: left;
+}
+
+#nextSectionLink {
+  float: right;
+}
+
 
 .verseLine {
   padding-bottom: 10px;

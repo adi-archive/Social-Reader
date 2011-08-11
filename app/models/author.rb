@@ -3,6 +3,7 @@ class Author
 
   field :first_name, :type => String
   field :last_name, :type => String
+  field :about, :type => String
 
   has_and_belongs_to_many :works
 

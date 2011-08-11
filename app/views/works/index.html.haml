@@ -3,6 +3,7 @@
   %div
     There are no works yet.
 - else
-  -Work.all.each do |work|
-    %div
-      = render :partial => "works/work_result", :locals => { :work => work }
+  %ul
+    -Work.all.each do |work|
+      %li
+        = render :partial => "works/work_result", :locals => { :work => work }

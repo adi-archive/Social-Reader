@@ -14,10 +14,12 @@ $(function() {
       });
       $(el).children().each(function(j, childEl) {
         if ($(childEl).attr('id') === 'sectionAnnotations') {
-          $(childEl).height(maxHeight + parseInt($('footer').height(), 10)
+          $(childEl).height(maxHeight
+              + parseInt($('footer').height(), 10)
               + parseInt($('footer').css('padding-bottom'), 10)
               // Multiply by 2 since the annotations have a negative margin.
-              + 2 * parseInt($('#main').css('padding-bottom'), 10));
+              + 2 * parseInt($('#main').css('padding-bottom'), 10)
+           );
         } else {
           $(childEl).height(maxHeight);
         }

@@ -3,6 +3,10 @@ class SectionsController < ApplicationController
 
   def show
     @work = Work.find(params[:work_id])
+    sections = @work.sections.asc(:position).to_a
+    index = sections.index(@section)
+    @previous_section = sections[index - 1] if index > 0 # since negative indexes wrap
+    @next_section = sections[index + 1] # returns nil if not found, so no need to guard
   end
 
   def index

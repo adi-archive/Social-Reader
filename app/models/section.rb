@@ -5,6 +5,7 @@ class Section
   field :position, :type => Integer
   field :form, :type => String
   field :raw_text, :type => String
+  field :summary, :type => String
 
   embeds_many :lines, :dependent => :destroy
   has_many :annotations, :dependent => :destroy
