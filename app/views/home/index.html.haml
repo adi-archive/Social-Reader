@@ -4,12 +4,19 @@
   #landingRight
     %h2 Hot Books
     #landingRightFirstSection
-      %div
-        = render "works/work_result", :work => Work.where(:title => "The Iliad").first, :small => true
-      %div
-        = render "works/work_result", :work => Work.where(:title => "The Odyssey").first, :small => true
+      - iliad = Work.where(:title => "The Iliad").first
+      - unless iliad.nil?
+        %div
+          = render "works/work_result", :work => iliad, :small => true
+      - odyssey = Work.where(:title => "The Odyssey").first
+      -unless odyssey.nil?
+        %div
+          = render "works/work_result", :work => odyssey, :small => true
     #landingRightSecondSection
-      = render "works/work_result", :work => Work.where(:title => "The Republic").first, :small => true
+      - republic = Work.where(:title => "The Republic").first
+      -unless republic.nil?
+        %div
+          = render "works/work_result", :work => republic, :small => true
 
   #landingLeft
     %h2{:id => "landingPointsHeader"}Your stop for Lit Hum and CC.

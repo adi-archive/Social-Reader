@@ -1,8 +1,7 @@
 -# = link_to(work.title, work_path(work)) + " " + get_byline(work)
 
 .workResult.clearfix{:class => small ? 'small' : 'large'}
-  %a{:href => ''}
-  -# %a{:href => work_path(work)}
+  %a{:href => work_path(work)}
     %img.workImage.shadowedImage{:src => work.cover_image_url, :alt => "Book cover"}
   .workActionsWrapper
     .workActions
