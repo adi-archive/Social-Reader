@@ -16,7 +16,7 @@ $link-active-color: #607890;
 
 $link-visited-color: #607890;
 
-$selected-font-color: #fff;  // color for selected text
+$selected-font-color: $font-color;  // color for selected text
 
 $selected-background-color: lightBlue; //#ff5E99;  // bg-color for selected text
 

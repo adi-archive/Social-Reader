@@ -1,0 +1,19 @@
+<div class="pageHeading">
+  <h2>Sign in</h2>
+</div>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "devise_form" }) do |f| %>
+  <p><%= f.label :email %>
+  <%= f.email_field :email %></p>
+
+  <p><%= f.label :password %>
+  <%= f.password_field :password %></p>
+
+  <% if devise_mapping.rememberable? -%>
+    <p class="rightColumn"><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+  <% end -%>
+
+  <p><%= f.submit "Sign in", :class => "cupid-green button rightColumn" %></p>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>

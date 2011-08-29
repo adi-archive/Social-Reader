@@ -1,9 +1,10 @@
-%h1{:class => "pageName"} All Works
+.pageHeading
+  %h1{:class => "pageName"} All Books
 - if Work.all.empty?
   %div
-    There are no works yet.
+    There are no books yet.
 - else
   %ul
     -Work.all.each do |work|
       %li
-        = render :partial => "works/work_result", :locals => { :work => work }
+        = render "works/work_result", :work => work, :small => true

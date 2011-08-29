@@ -1,14 +1,18 @@
 #sectionWrapper{:class => "jsClearfix"}
-  #sectionAnnotations
+  #sectionAnnotations.pane
     #sectionAnnotationsContent
-      - unless @previous_section.nil?
-        #previousSectionLink
-          = link_to('<< ' + @previous_section.to_s, work_section_path(@work, @previous_section))
-      - unless @next_section.nil?
-        #nextSectionLink
-          = link_to(@next_section.to_s + ' >>', work_section_path(@work, @next_section))
+      #sectionNavLinks{:class => "clearfix"}
+        - unless @previous_section.nil?
+          #previousSectionLink
+            = link_to('<< ' + @previous_section.to_s, work_section_path(@work, @previous_section))
+        - unless @next_section.nil?
+          #nextSectionLink
+            = link_to(@next_section.to_s + ' >>', work_section_path(@work, @next_section))
+      -#TODO - actually iterate here
+      = render :partial => "annotations/annotation", :locals => {:title => "Title", :text => "Text"}
+      = render :partial => "annotations/annotation", :locals => {:title => "Another title", :text => "More text"}
   #sectionContent
-    #sectionHeader
+    .pageHeading
       %h1{:class => "pageName"} #{link_to(@work, work_path(@work))} #{get_byline(@work)} - #{@section}
     #sectionText
       - @section.lines.each do |line|

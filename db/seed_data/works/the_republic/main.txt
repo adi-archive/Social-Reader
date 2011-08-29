@@ -1,0 +1,8 @@
+{
+  "title": "The Republic",
+  "isbn": "0140440488",
+  "amazon_url": "http://www.amazon.com/Republic-Penguin-Classics-Plato/dp/0140440488",
+  "authors": [["Plato"]],
+  "form": "prose",
+  "course": "CC"
+}

@@ -11,6 +11,8 @@ class Author
   # non-empty first and last names
   validate :must_have_name
 
+  attr_accessible :first_name, :last_name, :about
+
   def must_have_name
     errors.add(:base, "Must have first or last name.") if to_s.blank?
   end

@@ -1,9 +1,10 @@
 %div{:class => "logo"}
   %a{:href => root_path}SocialReader
 %nav
-  %a{:href => works_path} Find Works
+  %a{:href => works_path} Find Books
   - if current_user
-    %a{:href => view_profiles_path(current_user.id)} View Your Profile
+    %a{:href => view_profiles_path(current_user.id)} Your Profile
     = link_to('Logout', destroy_user_session_path, {:class => 'logout'})
   - else
+    = link_to('Sign Up', new_user_registration_path, {:class => 'login'})
     = link_to('Login', new_user_session_path, {:class => 'login'})

@@ -53,7 +53,8 @@ $logo-color: white;
 // $header-background-color: #227; // dark blue
 
 // green header scheme
-$header-background-color: #008500;
+$dominant-color: green;
+$header-background-color: green; // (#008500)
 $header-hover-background-color: #269926; //#00CC00
 $header-height: 45px;
 
@@ -67,16 +68,25 @@ $success-flash-background-color: #D8FCA5; // light green
 $success-flash-outline-color: green;
 
 
-$section-annotations-color: #E7F7DC;
-$section-annotations-hover-color: #E8FFD9;
+$pane-background-color: #E7F7DC;
+$pane-hover-background-color: #E8FFD9;
 
 // stronger green highlight: #D3F0C0
 // blacks:
-  // $section-annotations-color: #868282;
-  // $section-annotations-hover-color: #B2ACAC;
+  // $pane-background-color: #868282;
+  // $pane-hover-background-color: #B2ACAC;
 
 $main-top-bottom-margin: 15px;
 $main-left-right-margin: 30px;
+
+$annotation-border-radius: 10px;
+$annotation-border-color: $dominant-color;
+$annotation-title-background-color: $dominant-color;
+$annotation-content-background-color: white;
+$annotation-title-top-bottom-padding: 5px;
+$annotation-left-right-padding: 10px;
+$annotation-content-top-bottom-padding: 5px;
+$annotation-title-text-color: white;
 
 a {
   text-decoration: none;
@@ -86,6 +96,34 @@ ul, li {
   list-style: none;
 	margin: 0;
 }
+
+h1 {
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+h2.cupid-green {
+  font-size: 17px;
+}
+
+body {
+  word-wrap: break-word;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
 
 #header {
   padding-bottom: 0;
@@ -129,34 +167,35 @@ body {
   padding: 2.5% 8%; // 30px 100px;
 }
 
+form.devise_form {
+  padding-bottom: 20px;
+  label {
+    padding-right: 10px;
+    padding-bottom: 25px;
+  }
+  .rightColumn {
+    margin-left: 110px;
+  }
+}
+
 #flash .success {
   padding: 10px;
   margin: 10px 0;
   background: $success-flash-background-color;
-  border: 3px solid $success-flash-outline-color; 
+  border: 3px solid $success-flash-outline-color;
 }
 
 #flash .error {
   padding: 10px;
   margin: 10px 0;
   background: $error-flash-background-color;
-  border: 3px solid $error-flash-outline-color; 
+  border: 3px solid $error-flash-outline-color;
 }
 
 
 #container {
   background: $container-background-color;
   @include box-shadow(black 5px 5px 20px);
-}
-
-h1 {
-  font-size: 20px;
-  padding-bottom: 5px;
-}
-
-h2 {
-  font-size: 15px;
-  padding-bottom: 5px;
 }
 
 .pageName {
@@ -185,14 +224,41 @@ form div {
   padding-bottom: 30px;
 }
 
-#sectionHeader {
-  padding-bottom: 10px;
+$landing-left-width: 50%;
+$landing-right-width: 50%;
+
+#landingRight {
+  float: right;
+  width: 50%;
 }
 
-// sectionText and sectionAnnotations widths add up to 100% - then the margin
+#landingRightFirstSection {
+  width: 45%;
+  float: left;
+}
+
+#landingRightSecondSection {
+  width: 45%;
+  float: right;
+}
+
+#landingLeft {
+  width: 50%;
+}
+
+#landingButtons {
+  padding: 20px 0;
+}
+
+#landingButtons .button {
+  float: left;
+  margin-right: 30px;
+}
+
+// sectionContent and sectionAnnotations widths add up to 100% - then the margin
 // between them (regardless of the size of the window) is equal to the
 // negative margin-right of the section Annotations.
-#sectionText {
+#sectionContent {
   width: 65%;
 }
 
@@ -201,15 +267,170 @@ form div {
   margin-right: -$main-left-right-margin;
   float: right;
   width: 35%;
-  background: $section-annotations-color;
 }
 
 #sectionAnnotationsContent {
-  margin: 5px 10px;
+  margin: 10px 10px;
 }
 
-#sectionAnnotations:hover {
-  background: $section-annotations-hover-color;
+#landingPoints {
+  padding-left: 20px;
+}
+
+#landingPointsHeader {
+  padding-bottom: 0;
+}
+
+#landingPoints li {
+  padding-bottom: 2px 0;
+  list-style: disc;
+}
+
+.dropdownButton {
+  width: 83px;
+  .dropdownButtonArrow {
+    float: right;
+    border-top-left-radius: 0;
+    border-left: 1px solid #63A62F;
+    width: 20px;
+    // TODO - set width and height
+  }
+  .dropdownButtonText {
+    width: 80px;
+  }
+}
+
+.pageHeading {
+  margin-bottom: 20px;
+}
+
+.pane {
+  background: $pane-background-color;
+  &:hover {
+    background: $pane-hover-background-color;
+  }
+}
+
+.twoColumn {
+  .left {
+    display: inline-block;
+    padding-right: 30px;
+  }
+  .right {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.shadowedImage {
+  box-shadow: #666 1px 1px 10px;
+  &:hover {
+    box-shadow: black 1px 1px 20px
+  }
+}
+
+.workResult {
+  .workImage {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .workActionsWrapper {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    .workActions {
+      position: absolute;
+      bottom: 0;
+      .workInfo {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.showWorkLeftNav {
+  .workImage {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+  .dropdownButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.workResult.large{
+  padding-bottom: 20px;
+  .workImage {
+    height: 100px;
+  }
+  .workActionsWrapper {
+    width: 600px;
+    height: 100px;
+    .workTitle {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .workAuthor {
+      font-size: 15px;
+    }
+  }
+}
+
+
+.workResult.small {
+  padding-bottom: 20px;
+  .workImage {
+    height: 100px;
+  }
+  .workActionsWrapper {
+    height: 100px;
+  }
+}
+
+.annotation {
+  margin: 15px 10px;
+}
+
+.annotationTop {
+  @include border-top-left-radius($annotation-border-radius);
+  @include border-top-right-radius($annotation-border-radius);
+  border-top: 1px solid $annotation-title-background-color;
+  border-left: 1px solid $annotation-title-background-color;
+  border-right: 1px solid $annotation-title-background-color;
+  padding-top: $annotation-title-top-bottom-padding;
+  background-color: $annotation-title-background-color;
+  font-size: 15px;
+}
+
+.annotationBody {
+  border-left: 1px solid $annotation-title-background-color;
+  border-right: 1px solid $annotation-title-background-color;
+}
+
+.annotationTitle {
+  background-color: $annotation-title-background-color;
+  color: $annotation-title-text-color;
+  font-weight: bold;
+  padding-bottom: $annotation-title-top-bottom-padding;
+  padding-left: $annotation-left-right-padding;
+  padding-right: $annotation-left-right-padding;
+  // TODO - add padding
+}
+
+.annotationContent {
+  background-color: $annotation-content-background-color;
+  padding: $annotation-content-top-bottom-padding $annotation-left-right-padding;
+}
+
+.annotationBottom {
+  @include border-bottom-left-radius($annotation-border-radius);
+  @include border-bottom-right-radius($annotation-border-radius);
+  padding-bottom: $annotation-content-top-bottom-padding;
+  background-color: $annotation-content-background-color;
+  border-left: 1px solid $annotation-title-background-color;
+  border-right: 1px solid $annotation-title-background-color;
+  border-bottom: 1px solid $annotation-title-background-color;
 }
 
 #previousSectionLink {
@@ -220,12 +441,11 @@ form div {
   float: right;
 }
 
-
 .verseLine {
   padding-bottom: 10px;
 }
 
 footer {
-  padding: 20px;
+  padding: 20px $main-left-right-margin;
   padding-top: 0;
 }

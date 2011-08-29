@@ -1,7 +1,7 @@
 module WorksHelper
 
   def get_byline_names(work)
-    authors = work.authors.map { |a| 
+    authors = work.authors.map { |a|
       link_to(a, author_path(a))
     }
     return "" if authors.nil?
@@ -17,6 +17,17 @@ module WorksHelper
 
   def get_byline(work)
     return "by #{get_byline_names(work)}".html_safe
+  end
+
+  def sections_to_dropdown_options(work)
+    dropdown_sections = []
+    work.sections.each do |s|
+      dropdown_sections << {
+        :text => s.name,
+        :href => work_section_path(work, s)
+      }
+    end
+    dropdown_sections
   end
 
 end

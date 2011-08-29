@@ -170,14 +170,14 @@ button::-moz-focus-inner {
 /* line 99, ../../../../../.rvm/gems/ruby-1.9.2-p290@socialreader/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 ::-moz-selection {
   background: lightBlue;
-  color: white;
+  color: #444444;
   text-shadow: none;
 }
 
 /* line 100, ../../../../../.rvm/gems/ruby-1.9.2-p290@socialreader/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 ::selection {
   background: lightBlue;
-  color: white;
+  color: #444444;
   text-shadow: none;
 }
 
@@ -303,26 +303,58 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 81, ../../app/stylesheets/partials/_page.scss */
+/* line 91, ../../app/stylesheets/partials/_page.scss */
 a {
   text-decoration: none;
 }
 
-/* line 85, ../../app/stylesheets/partials/_page.scss */
+/* line 95, ../../app/stylesheets/partials/_page.scss */
 ul, li {
   list-style: none;
   margin: 0;
 }
 
-/* line 90, ../../app/stylesheets/partials/_page.scss */
+/* line 100, ../../app/stylesheets/partials/_page.scss */
+h1 {
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+/* line 105, ../../app/stylesheets/partials/_page.scss */
+h2 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+/* line 110, ../../app/stylesheets/partials/_page.scss */
+h2.cupid-green {
+  font-size: 17px;
+}
+
+/* line 114, ../../app/stylesheets/partials/_page.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 118, ../../app/stylesheets/partials/_page.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 128, ../../app/stylesheets/partials/_page.scss */
 #header {
   padding-bottom: 0;
   height: 45px;
   line-height: 45px;
-  background: #008500;
+  background: green;
 }
 
-/* line 97, ../../app/stylesheets/partials/_page.scss */
+/* line 135, ../../app/stylesheets/partials/_page.scss */
 #header .logo a {
   padding: 0 20px;
   vertical-align: middle;
@@ -333,12 +365,12 @@ ul, li {
   float: left;
 }
 
-/* line 107, ../../app/stylesheets/partials/_page.scss */
+/* line 145, ../../app/stylesheets/partials/_page.scss */
 #header nav {
   float: right;
 }
 
-/* line 111, ../../app/stylesheets/partials/_page.scss */
+/* line 149, ../../app/stylesheets/partials/_page.scss */
 #header nav a {
   display: inline-block;
   font-size: 15px;
@@ -346,24 +378,38 @@ ul, li {
   padding: 0 10px;
 }
 
-/* line 118, ../../app/stylesheets/partials/_page.scss */
+/* line 156, ../../app/stylesheets/partials/_page.scss */
 #header a {
   color: white;
   text-decoration: none;
 }
 
-/* line 123, ../../app/stylesheets/partials/_page.scss */
+/* line 161, ../../app/stylesheets/partials/_page.scss */
 #header a:hover {
   background-color: #269926;
 }
 
-/* line 127, ../../app/stylesheets/partials/_page.scss */
+/* line 165, ../../app/stylesheets/partials/_page.scss */
 body {
   background: #505050;
   padding: 2.5% 8%;
 }
 
-/* line 132, ../../app/stylesheets/partials/_page.scss */
+/* line 170, ../../app/stylesheets/partials/_page.scss */
+form.devise_form {
+  padding-bottom: 20px;
+}
+/* line 172, ../../app/stylesheets/partials/_page.scss */
+form.devise_form label {
+  padding-right: 10px;
+  padding-bottom: 25px;
+}
+/* line 176, ../../app/stylesheets/partials/_page.scss */
+form.devise_form .rightColumn {
+  margin-left: 110px;
+}
+
+/* line 181, ../../app/stylesheets/partials/_page.scss */
 #flash .success {
   padding: 10px;
   margin: 10px 0;
@@ -371,7 +417,7 @@ body {
   border: 3px solid green;
 }
 
-/* line 139, ../../app/stylesheets/partials/_page.scss */
+/* line 188, ../../app/stylesheets/partials/_page.scss */
 #flash .error {
   padding: 10px;
   margin: 10px 0;
@@ -379,7 +425,7 @@ body {
   border: 3px solid red;
 }
 
-/* line 147, ../../app/stylesheets/partials/_page.scss */
+/* line 196, ../../app/stylesheets/partials/_page.scss */
 #container {
   background: #fafafa;
   -moz-box-shadow: black 5px 5px 20px;
@@ -388,98 +434,483 @@ body {
   box-shadow: black 5px 5px 20px;
 }
 
-/* line 152, ../../app/stylesheets/partials/_page.scss */
-h1 {
-  font-size: 20px;
-  padding-bottom: 5px;
-}
-
-/* line 157, ../../app/stylesheets/partials/_page.scss */
-h2 {
-  font-size: 15px;
-  padding-bottom: 5px;
-}
-
-/* line 162, ../../app/stylesheets/partials/_page.scss */
+/* line 201, ../../app/stylesheets/partials/_page.scss */
 .pageName {
   display: inline-block;
 }
 
-/* line 166, ../../app/stylesheets/partials/_page.scss */
+/* line 205, ../../app/stylesheets/partials/_page.scss */
 .editLink {
   vertical-align: top;
   font-size: 10px;
 }
 
-/* line 171, ../../app/stylesheets/partials/_page.scss */
+/* line 210, ../../app/stylesheets/partials/_page.scss */
 .pageSubtitle {
   display: inline-block;
 }
 
-/* line 175, ../../app/stylesheets/partials/_page.scss */
+/* line 214, ../../app/stylesheets/partials/_page.scss */
 #main {
   padding: 15px 30px;
 }
 
-/* line 179, ../../app/stylesheets/partials/_page.scss */
+/* line 218, ../../app/stylesheets/partials/_page.scss */
 form label {
   display: inline-block;
   width: 100px;
 }
 
-/* line 184, ../../app/stylesheets/partials/_page.scss */
+/* line 223, ../../app/stylesheets/partials/_page.scss */
 form div {
   padding-bottom: 30px;
 }
 
-/* line 188, ../../app/stylesheets/partials/_page.scss */
-#sectionHeader {
-  padding-bottom: 10px;
+/* line 230, ../../app/stylesheets/partials/_page.scss */
+#landingRight {
+  float: right;
+  width: 50%;
 }
 
-/* line 195, ../../app/stylesheets/partials/_page.scss */
-#sectionText {
+/* line 235, ../../app/stylesheets/partials/_page.scss */
+#landingRightFirstSection {
+  width: 45%;
+  float: left;
+}
+
+/* line 240, ../../app/stylesheets/partials/_page.scss */
+#landingRightSecondSection {
+  width: 45%;
+  float: right;
+}
+
+/* line 245, ../../app/stylesheets/partials/_page.scss */
+#landingLeft {
+  width: 50%;
+}
+
+/* line 249, ../../app/stylesheets/partials/_page.scss */
+#landingButtons {
+  padding: 20px 0;
+}
+
+/* line 253, ../../app/stylesheets/partials/_page.scss */
+#landingButtons .button {
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 261, ../../app/stylesheets/partials/_page.scss */
+#sectionContent {
   width: 65%;
 }
 
-/* line 199, ../../app/stylesheets/partials/_page.scss */
+/* line 265, ../../app/stylesheets/partials/_page.scss */
 #sectionAnnotations {
   margin-top: -15px;
   margin-right: -30px;
   float: right;
   width: 35%;
+}
+
+/* line 272, ../../app/stylesheets/partials/_page.scss */
+#sectionAnnotationsContent {
+  margin: 10px 10px;
+}
+
+/* line 276, ../../app/stylesheets/partials/_page.scss */
+#landingPoints {
+  padding-left: 20px;
+}
+
+/* line 280, ../../app/stylesheets/partials/_page.scss */
+#landingPointsHeader {
+  padding-bottom: 0;
+}
+
+/* line 284, ../../app/stylesheets/partials/_page.scss */
+#landingPoints li {
+  padding-bottom: 2px 0;
+  list-style: disc;
+}
+
+/* line 289, ../../app/stylesheets/partials/_page.scss */
+.dropdownButton {
+  width: 83px;
+}
+/* line 291, ../../app/stylesheets/partials/_page.scss */
+.dropdownButton .dropdownButtonArrow {
+  float: right;
+  border-top-left-radius: 0;
+  border-left: 1px solid #63A62F;
+  width: 20px;
+}
+/* line 298, ../../app/stylesheets/partials/_page.scss */
+.dropdownButton .dropdownButtonText {
+  width: 80px;
+}
+
+/* line 303, ../../app/stylesheets/partials/_page.scss */
+.pageHeading {
+  margin-bottom: 20px;
+}
+
+/* line 307, ../../app/stylesheets/partials/_page.scss */
+.pane {
   background: #e7f7dc;
 }
-
-/* line 207, ../../app/stylesheets/partials/_page.scss */
-#sectionAnnotationsContent {
-  margin: 5px 10px;
-}
-
-/* line 211, ../../app/stylesheets/partials/_page.scss */
-#sectionAnnotations:hover {
+/* line 309, ../../app/stylesheets/partials/_page.scss */
+.pane:hover {
   background: #e8ffd9;
 }
 
-/* line 215, ../../app/stylesheets/partials/_page.scss */
+/* line 315, ../../app/stylesheets/partials/_page.scss */
+.twoColumn .left {
+  display: inline-block;
+  padding-right: 30px;
+}
+/* line 319, ../../app/stylesheets/partials/_page.scss */
+.twoColumn .right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 325, ../../app/stylesheets/partials/_page.scss */
+.shadowedImage {
+  box-shadow: #666 1px 1px 10px;
+}
+/* line 327, ../../app/stylesheets/partials/_page.scss */
+.shadowedImage:hover {
+  box-shadow: black 1px 1px 20px;
+}
+
+/* line 333, ../../app/stylesheets/partials/_page.scss */
+.workResult .workImage {
+  display: inline-block;
+  margin-right: 10px;
+}
+/* line 337, ../../app/stylesheets/partials/_page.scss */
+.workResult .workActionsWrapper {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+/* line 341, ../../app/stylesheets/partials/_page.scss */
+.workResult .workActionsWrapper .workActions {
+  position: absolute;
+  bottom: 0;
+}
+/* line 344, ../../app/stylesheets/partials/_page.scss */
+.workResult .workActionsWrapper .workActions .workInfo {
+  margin-bottom: 15px;
+}
+
+/* line 352, ../../app/stylesheets/partials/_page.scss */
+.showWorkLeftNav .workImage {
+  height: 200px;
+  margin-bottom: 15px;
+}
+/* line 356, ../../app/stylesheets/partials/_page.scss */
+.showWorkLeftNav .dropdownButton {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 362, ../../app/stylesheets/partials/_page.scss */
+.workResult.large {
+  padding-bottom: 20px;
+}
+/* line 364, ../../app/stylesheets/partials/_page.scss */
+.workResult.large .workImage {
+  height: 100px;
+}
+/* line 367, ../../app/stylesheets/partials/_page.scss */
+.workResult.large .workActionsWrapper {
+  width: 600px;
+  height: 100px;
+}
+/* line 370, ../../app/stylesheets/partials/_page.scss */
+.workResult.large .workActionsWrapper .workTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 374, ../../app/stylesheets/partials/_page.scss */
+.workResult.large .workActionsWrapper .workAuthor {
+  font-size: 15px;
+}
+
+/* line 381, ../../app/stylesheets/partials/_page.scss */
+.workResult.small {
+  padding-bottom: 20px;
+}
+/* line 383, ../../app/stylesheets/partials/_page.scss */
+.workResult.small .workImage {
+  height: 100px;
+}
+/* line 386, ../../app/stylesheets/partials/_page.scss */
+.workResult.small .workActionsWrapper {
+  height: 100px;
+}
+
+/* line 391, ../../app/stylesheets/partials/_page.scss */
+.annotation {
+  margin: 15px 10px;
+}
+
+/* line 395, ../../app/stylesheets/partials/_page.scss */
+.annotationTop {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid green;
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+  padding-top: 5px;
+  background-color: green;
+  font-size: 15px;
+}
+
+/* line 406, ../../app/stylesheets/partials/_page.scss */
+.annotationBody {
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+}
+
+/* line 411, ../../app/stylesheets/partials/_page.scss */
+.annotationTitle {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 421, ../../app/stylesheets/partials/_page.scss */
+.annotationContent {
+  background-color: white;
+  padding: 5px 10px;
+}
+
+/* line 426, ../../app/stylesheets/partials/_page.scss */
+.annotationBottom {
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -o-border-bottom-left-radius: 10px;
+  -ms-border-bottom-left-radius: 10px;
+  -khtml-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -o-border-bottom-right-radius: 10px;
+  -ms-border-bottom-right-radius: 10px;
+  -khtml-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 5px;
+  background-color: white;
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+  border-bottom: 1px solid green;
+}
+
+/* line 436, ../../app/stylesheets/partials/_page.scss */
 #previousSectionLink {
   float: left;
 }
 
-/* line 219, ../../app/stylesheets/partials/_page.scss */
+/* line 440, ../../app/stylesheets/partials/_page.scss */
 #nextSectionLink {
   float: right;
 }
 
-/* line 224, ../../app/stylesheets/partials/_page.scss */
+/* line 444, ../../app/stylesheets/partials/_page.scss */
 .verseLine {
   padding-bottom: 10px;
 }
 
-/* line 228, ../../app/stylesheets/partials/_page.scss */
+/* line 448, ../../app/stylesheets/partials/_page.scss */
 footer {
-  padding: 20px;
+  padding: 20px 30px;
   padding-top: 0;
+}
+
+/* line 1, ../../app/stylesheets/buttons/buttons.scss */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* minimal
+*******************************************************************************/
+/* line 34, ../../app/stylesheets/buttons/buttons.scss */
+button.minimal {
+  background: #e3e3e3;
+  border: 1px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -o-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #333;
+  font: bold 12px "helvetica neue", helvetica, arial, sans-serif;
+  line-height: 1;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  width: 150px;
+}
+/* line 20, ../../app/stylesheets/buttons/buttons.scss */
+button.minimal:hover {
+  background: #d9d9d9;
+  -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  -o-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222;
+  cursor: pointer;
+}
+/* line 27, ../../app/stylesheets/buttons/buttons.scss */
+button.minimal:active {
+  background: #d0d0d0;
+  -moz-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  -o-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  box-shadow: inset 0 0 1px 1px #e3e3e3;
+  color: #000;
+}
+
+/* clean gray
+*******************************************************************************/
+/* line 68, ../../app/stylesheets/buttons/buttons.scss */
+button.clean-gray {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: linear-gradient(top, #eeeeee, #cccccc);
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+  font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  line-height: 1;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  width: 150px;
+}
+/* line 53, ../../app/stylesheets/buttons/buttons.scss */
+button.clean-gray:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: linear-gradient(top, #dddddd, #bbbbbb);
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
+  text-shadow: 0 1px 0 #ddd;
+}
+/* line 61, ../../app/stylesheets/buttons/buttons.scss */
+button.clean-gray:active {
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  -o-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+}
+
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+/* line 101, ../../app/stylesheets/buttons/buttons.scss */
+.cupid-green {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
+  background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: linear-gradient(top, #7fbf4d, #63a62f);
+  border: 1px solid #63a62f;
+  border-bottom: 1px solid #5b992b;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+  -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+  -o-box-shadow: inset 0 1px 0 0 #96ca6d;
+  box-shadow: inset 0 1px 0 0 #96ca6d;
+  color: #fff;
+  font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  line-height: 1;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #4c9021;
+  width: 150px;
+}
+/* line 88, ../../app/stylesheets/buttons/buttons.scss */
+.cupid-green:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
+  background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+  background-image: linear-gradient(top, #76b347, #5e9e2e);
+  -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+  -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+  -o-box-shadow: inset 0 1px 0 0 #8dbf67;
+  box-shadow: inset 0 1px 0 0 #8dbf67;
+  cursor: pointer;
+}
+/* line 94, ../../app/stylesheets/buttons/buttons.scss */
+.cupid-green:active {
+  border: 1px solid #5b992b;
+  border-bottom: 1px solid #538c27;
+  -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+  -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+  -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+}
+
+/* disabled button styles
+   works with this markup: <button disabled="disabled">Submit</button>
+*******************************************************************************/
+/* line 110, ../../app/stylesheets/buttons/buttons.scss */
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active {
+  background: #999;
+  border: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  color: #aaa;
+  cursor: not-allowed;
+  text-shadow: none;
 }
 
 /*/mediaquery*/

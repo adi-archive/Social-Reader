@@ -27,10 +27,35 @@ $(function() {
     });
   }
 
+  // Triggers highlight eventson the body text.
+  function addHighlightEventTrigger() {
+    var sectionText = $('#sectionText');
+    $(document.body).mouseup(function() {
+      var txt = '';
+      if (window.getSelection) {
+        txt = window.getSelection();
+      } else if (document.getSelection) {
+        txt = document.getSelection();
+      } else if (document.selection) {
+        txt = document.selection.createRange();
+        txt.toString = function() { return this.text };
+        txt.toHtml = function() { return this.htmlText };
+      }
+      console.log(sectionText.text());
+      console.log(txt.toString());
+      if (txt && sectionText.text().replace("\n", " ").indexOf(txt.toString().replace("\n", " ")) !== -1) {
+        console.log('achievement unlocked');
+      } else {
+        console.log('bitch, please');
+      }
+    });
+  }
+
   // Call initializing functions
   (function() {
     hideFlash();
     cssHacks();
+    addHighlightEventTrigger();
   })();
 
 });

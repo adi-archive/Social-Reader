@@ -1,0 +1,8 @@
+{
+  "title": "The Odyssey",
+  "isbn": "0140268863",
+  "amazon_url": "http://www.amazon.com/Odyssey-Robert-Fagles/dp/0140268863",
+  "authors": [["Homer"]],
+  "form": "verse",
+  "course": "LH"
+}

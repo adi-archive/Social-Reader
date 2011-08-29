@@ -7,5 +7,6 @@ class User
 
   field :admin, :type => Boolean, :default => false
 
+  has_one :profile
 
 end

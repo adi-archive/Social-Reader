@@ -1,2 +1,24 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.pageHeading
+  %h1 Welcome to SocialReader!
+%div{:class => "clearfix"}
+  #landingRight
+    %h2 Hot Books
+    #landingRightFirstSection
+      %div
+        = render "works/work_result", :work => Work.where(:title => "The Iliad").first, :small => true
+      %div
+        = render "works/work_result", :work => Work.where(:title => "The Odyssey").first, :small => true
+    #landingRightSecondSection
+      = render "works/work_result", :work => Work.where(:title => "The Republic").first, :small => true
+
+  #landingLeft
+    %h2{:id => "landingPointsHeader"}Your stop for Lit Hum and CC.
+    %ul{:id => "landingPoints"}
+      %li <strong>Read</strong> all your Lit Hum and CC books.
+      %li <strong>Discuss</strong> works with your peers.
+      %li <strong>Save</strong> notes and progress.
+    #landingButtons{:class => "clearfix"}
+      %a{:href => new_user_registration_path}
+        %h2{:class => "cupid-green button"}Sign Up
+      %a{:href => new_user_session_path}
+        %h2{:class => "cupid-green button"}Sign In

@@ -7,7 +7,7 @@ class Line
 
   embedded_in :section
 
-  attr_accessible :words
+  attr_accessible :words, :number, :display_number
 
   def to_s
     words.join(' ')
