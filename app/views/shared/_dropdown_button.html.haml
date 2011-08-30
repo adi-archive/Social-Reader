@@ -1,4 +1,5 @@
 .dropdownButton
-  %div{:class => "cupid-green button dropdownButtonArrow " + className}X
+  %div{:class => "cupid-green button dropdownButtonArrowContainer " + className}
+    %span{:class => "dropdownButtonArrow"} &darr;
   %a{:href => buttonLink}
     %div{:class => "cupid-green button dropdownButtonText " + className}#{text}

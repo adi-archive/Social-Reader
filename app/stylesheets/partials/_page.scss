@@ -288,12 +288,17 @@ $landing-right-width: 50%;
 
 .dropdownButton {
   width: 83px;
-  .dropdownButtonArrow {
+  .dropdownButtonArrowContainer {
     float: right;
     border-top-left-radius: 0;
     border-left: 1px solid #63A62F;
-    width: 20px;
-    // TODO - set width and height
+    width: 25px;
+    padding: 0;
+    height: 25px;
+    .dropdownButtonArrow {
+      margin-top: 2.5px;
+      font-size: 20px;
+    }
   }
   .dropdownButtonText {
     width: 80px;
