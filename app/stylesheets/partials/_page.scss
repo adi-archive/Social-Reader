@@ -293,9 +293,10 @@ $landing-right-width: 50%;
     border-left: 1px solid #63A62F;
     width: 25px;
     padding: 0;
-    height: 25px;
+    height: 26px;
     .dropdownButtonArrow {
-      margin-top: 2.5px;
+      margin-top: 3px;
+      display: inline-block;
       font-size: 20px;
     }
   }

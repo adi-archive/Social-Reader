@@ -545,126 +545,127 @@ form div {
   border-left: 1px solid #63A62F;
   width: 25px;
   padding: 0;
-  height: 25px;
+  height: 26px;
 }
 /* line 297, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonArrowContainer .dropdownButtonArrow {
-  margin-top: 2.5px;
+  margin-top: 3px;
+  display: inline-block;
   font-size: 20px;
 }
-/* line 302, ../../app/stylesheets/partials/_page.scss */
+/* line 303, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonText {
   width: 80px;
 }
 
-/* line 307, ../../app/stylesheets/partials/_page.scss */
+/* line 308, ../../app/stylesheets/partials/_page.scss */
 .pageHeading {
   margin-bottom: 20px;
 }
 
-/* line 311, ../../app/stylesheets/partials/_page.scss */
+/* line 312, ../../app/stylesheets/partials/_page.scss */
 .pane {
   background: #e7f7dc;
 }
-/* line 313, ../../app/stylesheets/partials/_page.scss */
+/* line 314, ../../app/stylesheets/partials/_page.scss */
 .pane:hover {
   background: #e8ffd9;
 }
 
-/* line 319, ../../app/stylesheets/partials/_page.scss */
+/* line 320, ../../app/stylesheets/partials/_page.scss */
 .twoColumn .left {
   display: inline-block;
   padding-right: 30px;
 }
-/* line 323, ../../app/stylesheets/partials/_page.scss */
+/* line 324, ../../app/stylesheets/partials/_page.scss */
 .twoColumn .right {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 329, ../../app/stylesheets/partials/_page.scss */
+/* line 330, ../../app/stylesheets/partials/_page.scss */
 .shadowedImage {
   box-shadow: #666 1px 1px 10px;
 }
-/* line 331, ../../app/stylesheets/partials/_page.scss */
+/* line 332, ../../app/stylesheets/partials/_page.scss */
 .shadowedImage:hover {
   box-shadow: black 1px 1px 20px;
 }
 
-/* line 337, ../../app/stylesheets/partials/_page.scss */
+/* line 338, ../../app/stylesheets/partials/_page.scss */
 .workResult .workImage {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 341, ../../app/stylesheets/partials/_page.scss */
+/* line 342, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 345, ../../app/stylesheets/partials/_page.scss */
+/* line 346, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper .workActions {
   position: absolute;
   bottom: 0;
 }
-/* line 348, ../../app/stylesheets/partials/_page.scss */
+/* line 349, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper .workActions .workInfo {
   margin-bottom: 15px;
 }
 
-/* line 356, ../../app/stylesheets/partials/_page.scss */
+/* line 357, ../../app/stylesheets/partials/_page.scss */
 .showWorkLeftNav .workImage {
   height: 200px;
   margin-bottom: 15px;
 }
-/* line 360, ../../app/stylesheets/partials/_page.scss */
+/* line 361, ../../app/stylesheets/partials/_page.scss */
 .showWorkLeftNav .dropdownButton {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 366, ../../app/stylesheets/partials/_page.scss */
+/* line 367, ../../app/stylesheets/partials/_page.scss */
 .workResult.large {
   padding-bottom: 20px;
 }
-/* line 368, ../../app/stylesheets/partials/_page.scss */
+/* line 369, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workImage {
   height: 100px;
 }
-/* line 371, ../../app/stylesheets/partials/_page.scss */
+/* line 372, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper {
   width: 600px;
   height: 100px;
 }
-/* line 374, ../../app/stylesheets/partials/_page.scss */
+/* line 375, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper .workTitle {
   font-size: 20px;
   font-weight: bold;
 }
-/* line 378, ../../app/stylesheets/partials/_page.scss */
+/* line 379, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper .workAuthor {
   font-size: 15px;
 }
 
-/* line 385, ../../app/stylesheets/partials/_page.scss */
+/* line 386, ../../app/stylesheets/partials/_page.scss */
 .workResult.small {
   padding-bottom: 20px;
 }
-/* line 387, ../../app/stylesheets/partials/_page.scss */
+/* line 388, ../../app/stylesheets/partials/_page.scss */
 .workResult.small .workImage {
   height: 100px;
 }
-/* line 390, ../../app/stylesheets/partials/_page.scss */
+/* line 391, ../../app/stylesheets/partials/_page.scss */
 .workResult.small .workActionsWrapper {
   height: 100px;
 }
 
-/* line 395, ../../app/stylesheets/partials/_page.scss */
+/* line 396, ../../app/stylesheets/partials/_page.scss */
 .annotation {
   margin: 15px 10px;
 }
 
-/* line 399, ../../app/stylesheets/partials/_page.scss */
+/* line 400, ../../app/stylesheets/partials/_page.scss */
 .annotationTop {
   -moz-border-radius-topleft: 10px;
   -webkit-border-top-left-radius: 10px;
@@ -686,13 +687,13 @@ form div {
   font-size: 15px;
 }
 
-/* line 410, ../../app/stylesheets/partials/_page.scss */
+/* line 411, ../../app/stylesheets/partials/_page.scss */
 .annotationBody {
   border-left: 1px solid green;
   border-right: 1px solid green;
 }
 
-/* line 415, ../../app/stylesheets/partials/_page.scss */
+/* line 416, ../../app/stylesheets/partials/_page.scss */
 .annotationTitle {
   background-color: green;
   color: white;
@@ -702,13 +703,13 @@ form div {
   padding-right: 10px;
 }
 
-/* line 425, ../../app/stylesheets/partials/_page.scss */
+/* line 426, ../../app/stylesheets/partials/_page.scss */
 .annotationContent {
   background-color: white;
   padding: 5px 10px;
 }
 
-/* line 430, ../../app/stylesheets/partials/_page.scss */
+/* line 431, ../../app/stylesheets/partials/_page.scss */
 .annotationBottom {
   -moz-border-radius-bottomleft: 10px;
   -webkit-border-bottom-left-radius: 10px;
@@ -729,22 +730,22 @@ form div {
   border-bottom: 1px solid green;
 }
 
-/* line 440, ../../app/stylesheets/partials/_page.scss */
+/* line 441, ../../app/stylesheets/partials/_page.scss */
 #previousSectionLink {
   float: left;
 }
 
-/* line 444, ../../app/stylesheets/partials/_page.scss */
+/* line 445, ../../app/stylesheets/partials/_page.scss */
 #nextSectionLink {
   float: right;
 }
 
-/* line 448, ../../app/stylesheets/partials/_page.scss */
+/* line 449, ../../app/stylesheets/partials/_page.scss */
 .verseLine {
   padding-bottom: 10px;
 }
 
-/* line 452, ../../app/stylesheets/partials/_page.scss */
+/* line 453, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px 30px;
   padding-top: 0;
