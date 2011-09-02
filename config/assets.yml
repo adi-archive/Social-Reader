@@ -10,8 +10,7 @@ javascripts:
   application:
     - public/javascripts/jquery.min.js
     - public/javascripts/rails.js
-    - public/javascripts/common.js
-    - public/javascripts/plugin.js
+    - public/javascripts/plugins.js
     - public/javascripts/application.js
 
 stylesheets:
