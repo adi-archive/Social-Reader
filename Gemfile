@@ -19,6 +19,8 @@ gem "html5-boilerplate"
 
 gem "heroku"
 
+gem "jammit"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

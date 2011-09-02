@@ -1,0 +1,19 @@
+embed_assets: off
+compress_assets: on
+allow_debugging: off
+
+javascripts:
+  head:
+    - public/javascripts/modernizr.min.js
+    - public/javascripts/respond.min.js
+
+  application:
+    - public/javascripts/jquery.min.js
+    - public/javascripts/rails.js
+    - public/javascripts/common.js
+    - public/javascripts/plugin.js
+    - public/javascripts/application.js
+
+stylesheets:
+  application:
+    - public/stylesheets/style.css

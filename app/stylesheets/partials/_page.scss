@@ -160,7 +160,7 @@ body {
     height: $close-button-radius;
     padding: 0;
     margin: 0;
-    background: #eee;
+    background: #aaa;
     @include border-radius(50px);
     span {
       color: white;
@@ -170,7 +170,7 @@ body {
       font-weight: bold;
     }
     &:hover {
-      background: #555;
+      background: #666;
       cursor: pointer;
     }
   }
