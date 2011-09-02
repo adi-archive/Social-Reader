@@ -557,8 +557,14 @@ $dropdown-arrow-container-width: 25px;
 
 .sectionNavLinks {
   margin: 10px;
+  // Centers the "Jump to Section" link.
+  text-align: center;
   .previousSectionLink {
     float: left;
+  }
+  .jumpSection {
+    // Ensure at least 5px.
+    padding: 0 5px;
   }
   .nextSectionLink {
     float: right;

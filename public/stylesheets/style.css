@@ -887,22 +887,27 @@ form div {
 /* line 558, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks {
   margin: 10px;
+  text-align: center;
 }
-/* line 560, ../../app/stylesheets/partials/_page.scss */
+/* line 562, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .previousSectionLink {
   float: left;
 }
-/* line 563, ../../app/stylesheets/partials/_page.scss */
+/* line 565, ../../app/stylesheets/partials/_page.scss */
+.sectionNavLinks .jumpSection {
+  padding: 0 5px;
+}
+/* line 569, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .nextSectionLink {
   float: right;
 }
 
-/* line 568, ../../app/stylesheets/partials/_page.scss */
+/* line 574, ../../app/stylesheets/partials/_page.scss */
 .verseLine {
   padding-bottom: 10px;
 }
 
-/* line 572, ../../app/stylesheets/partials/_page.scss */
+/* line 578, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px 30px;
   padding-top: 0;
