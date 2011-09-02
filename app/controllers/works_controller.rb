@@ -2,10 +2,10 @@ require 'json'
 
 class WorksController < ApplicationController
 
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:jump_sections_html]
 
   # show specific work
-  def show 
+  def show
   end
 
   # find a work
@@ -28,6 +28,11 @@ class WorksController < ApplicationController
   end
 
   def destroy
+  end
+
+  def jump_sections_html
+    @work = Work.find(params[:id])
+    render :partial => "works/jump_sections"
   end
 
 end

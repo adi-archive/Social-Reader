@@ -8,6 +8,8 @@ SocialReader::Application.routes.draw do
     resources :sections
   end
 
+  get 'works/:id/jump_sections/' => "works#jump_sections_html", :as => :jump_sections
+
   # get "works/section"
   devise_for :users
 

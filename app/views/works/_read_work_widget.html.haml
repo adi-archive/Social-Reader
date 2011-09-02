@@ -1,0 +1,3 @@
+- dropdown = render "works/work_dropdown", :work => work
+= render "shared/dropdown_button", :className => 'readNow', :text => "Read", |
+  :buttonLink => work_section_path(work, work.sections.asc(:position).first), :dropdown => dropdown

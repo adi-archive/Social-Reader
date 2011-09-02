@@ -1,10 +1,20 @@
+(function(window, undefined) {
+  var sr = {};
+  sr.cache = {};
+
+
+  window.sr = sr;
+
+})(window);
+
+
 $(function() {
 
-  function hideFlash() {
+  (function hideFlash() {
     setTimeout(function() { $('#flash').slideUp('slow') }, 5000);
-  }
+  })();
 
-  function cssHacks() {
+  (function cssHacks() {
     // Make the heights of direct children of the elements that request this fix
     // equal.
     $('.jsClearfix').each(function(i, el) {
@@ -25,10 +35,11 @@ $(function() {
         }
       });
     });
-  }
+  })();
 
   // Triggers highlight eventson the body text.
-  function addHighlightEventTrigger() {
+  /*
+  (function addHighlightEventTrigger() {
     var sectionText = $('#sectionText');
     $(document.body).mouseup(function() {
       var txt = '';
@@ -49,13 +60,47 @@ $(function() {
         console.log('bitch, please');
       }
     });
-  }
+  })();
+  */
 
-  // Call initializing functions
-  (function() {
-    hideFlash();
-    cssHacks();
-    addHighlightEventTrigger();
+  (function addDropdownListeners() {
+    $('.dropdownButtonArrowContainer').hover(function(e) {
+      var button = $(this).closest('.dropdownButton');
+      var dropdown = button.find('.dropdown');
+      button.mouseleave(function() {
+        dropdown.slideUp('fast');
+      });
+      dropdown.slideDown('fast');
+    });
   })();
 
+  (function addWorkDropdownListeners() {
+    $('.jumpSection').click(function(e) {
+      $.get('/works/' + $(this).data('work_id') + '/jump_sections', {},
+          function(data) {
+        sr.setOverlay(data);
+      });
+    });
+  })();
+
+  (function initializeOverlay() {
+    $('#overlayClose').click(function() {
+      sr.hideOverlay();
+    });
+  })();
+
+  sr.setOverlay = function(newHtml) {
+    var overlay = $('#overlay'),
+        overlayContent = $('#overlayContent');
+    overlayContent.html(newHtml);
+    overlay.show();
+  };
+
+  // Optionally pass in overlay
+  sr.hideOverlay = function(overlay) {
+    overlay = overlay || $('#overlay');
+    overlay.hide();
+  }
+
 });
+

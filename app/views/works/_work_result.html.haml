@@ -10,5 +10,4 @@
           = link_to(work.title, work_path(work))
         .workAuthor
           = get_byline(work)
-      = render "shared/dropdown_button", :className => 'readNow', :text => "Read", |
-          :options => sections_to_dropdown_options(work), :buttonLink => work_path(work)
+      = render "works/read_work_widget", :work => work

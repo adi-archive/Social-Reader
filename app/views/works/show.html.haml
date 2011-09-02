@@ -7,15 +7,6 @@
 .twoColumn.clearfix
   .left.showWorkLeftNav
     %img{:class => "workImage shadowedImage", :src => @work.cover_image_url, :alt => "Book cover"}
-    = render "shared/dropdown_button", :className => 'readNow', :text => "Read", |
-      :options => sections_to_dropdown_options(@work), :buttonLink => work_path(@work)
+    = render "works/read_work_widget", :work => @work
   .right
-    %h2 Sections
-    -if @work.sections.empty?
-      %div
-        There are no sections for this book yet.
-    - else
-      %ul
-        - @work.sections.asc(:position).each do |section|
-          %li
-            = render :partial => "sections/section_result", :locals => { :section => section, :work => @work}
+    %h2 About

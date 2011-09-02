@@ -88,6 +88,9 @@ $annotation-left-right-padding: 10px;
 $annotation-content-top-bottom-padding: 5px;
 $annotation-title-text-color: white;
 
+$close-button-radius: 32px;
+$close-button-font-size: 25px;
+
 a {
   text-decoration: none;
 }
@@ -114,6 +117,74 @@ h2.cupid-green {
 body {
   word-wrap: break-word;
 }
+
+#overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  #overlayContentWrapper {
+    z-index: 102;
+    background: white;
+    padding: 10px;
+    width: 600px;
+    max-height: 500px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @include border-radius(10px);
+
+    #overlayContent {
+      margin: 10px 30px;
+      max-height: 450px;
+      width: 550px;
+      overflow-y: auto;
+    }
+  }
+
+  #overlayClose {
+    text-align: center;
+    position: absolute;
+    top: -$close-button-radius/2;
+    right: -$close-button-radius/2;
+    width: $close-button-radius;
+    height: $close-button-radius;
+    padding: 0;
+    margin: 0;
+    background: #eee;
+    @include border-radius(50px);
+    span {
+      color: white;
+      font-size: $close-button-font-size;
+      margin-top: ($close-button-radius - $close-button-font-size) / 2;
+      display: inline-block;
+      font-weight: bold;
+    }
+    &:hover {
+      background: #555;
+      cursor: pointer;
+    }
+  }
+
+  ul.jump_sections {
+    margin-right: 30px;
+    float: left;
+    li {
+      padding: 5px 0;
+    }
+  }
+
+}
+
 
 .clearfix:after {
 	content: ".";
@@ -264,6 +335,7 @@ $landing-right-width: 50%;
 #sectionAnnotations {
   margin-top: -$main-top-bottom-margin;
   margin-right: -$main-left-right-margin;
+  position: relative;
   float: right;
   width: 35%;
 }
@@ -285,20 +357,59 @@ $landing-right-width: 50%;
   list-style: disc;
 }
 
+$dropdown-button-width: 83px;
+$dropdown-arrow-container-width: 25px;
+
 .dropdownButton {
-  width: 83px;
+  width: $dropdown-button-width;
+  position: relative;
   .dropdownButtonArrowContainer {
     float: right;
     border-top-left-radius: 0;
     border-left: 1px solid #63A62F;
-    width: 25px;
+    width: $dropdown-arrow-container-width;
     padding: 0;
     height: 26px;
     .dropdownButtonArrow {
-      margin-top: 3px;
+      margin-top: 5.5px;
       display: inline-block;
-      font-size: 20px;
+      font-size: 15px;
     }
+  }
+  .dropdown {
+    position: absolute;
+    left: $dropdown-button-width - $dropdown-arrow-container-width;
+    display: none;
+    width: 100px;
+    font-size: 11px;
+    z-index: 1;
+    border: 1px solid #63A62F;
+    @include border-radius(3px);
+    @include border-top-left-radius(0);
+    @include box-shadow(inset 0 1px 0 0 #96ca6d);
+
+    @include linear-gradient(color-stops(#7fbf4d, #63a62f), top);
+
+    .dropdownOption {
+      color: white;
+      padding: 5px 0 5px 8px;
+      border-bottom: 1px solid #ddd;
+      &:hover {
+        @include linear-gradient(color-stops(#76b347, #5e9e2e), top);
+        @include box-shadow(inset 0 1px 0 0 #8dbf67);
+        cursor: pointer;
+      }
+      &:active {
+        border: 1px solid #5b992b;
+        border-bottom: 1px solid #538c27;
+        @include box-shadow(inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee);
+      }
+
+    }
+    .dropdownOption:last-child {
+      border-bottom: none;
+    }
+
   }
   .dropdownButtonText {
     width: 80px;
@@ -438,12 +549,20 @@ $landing-right-width: 50%;
   border-bottom: 1px solid $annotation-title-background-color;
 }
 
-#previousSectionLink {
-  float: left;
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-#nextSectionLink {
-  float: right;
+.sectionNavLinks {
+  margin: 10px;
+  .previousSectionLink {
+    float: left;
+  }
+  .nextSectionLink {
+    float: right;
+  }
 }
 
 .verseLine {

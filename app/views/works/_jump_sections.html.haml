@@ -1,0 +1,13 @@
+%h1{:class => "pageName"} #{@work.title}
+%h2{:class => "pageSubtitle"} #{get_byline(@work)}
+%div
+  - sections = @work.sections.asc(:position)
+  -if @work.sections.empty?
+    %div
+      There are no sections for this book yet.
+  - else
+    - sections.each_slice((@work.sections.length / 2).ceil).each do |slice|
+      %ul.jump_sections
+        - slice.each do |s|
+          %li{:class => "section"}
+            = render "sections/section_result", :section => s, :work => @work

@@ -1,0 +1,7 @@
+.sectionNavLinks{:class => "clearfix"}
+  - unless @previous_section.nil?
+    .previousSectionLink
+      = link_to('&laquo; '.html_safe + @previous_section.to_s, work_section_path(@work, @previous_section))
+  - unless @next_section.nil?
+    .nextSectionLink
+      = link_to((@next_section.to_s + ' &raquo;').html_safe, work_section_path(@work, @next_section))
