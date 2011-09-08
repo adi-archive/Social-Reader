@@ -2,7 +2,13 @@ require 'json'
 
 class WorksController < ApplicationController
 
-  load_and_authorize_resource :except => [:jump_sections_html]
+  before_filter :get_work
+  load_and_authorize_resource :except => [:jump_sections_html, :download]
+
+
+  def get_work
+    @work = Work.find_by_permalink(params[:id])
+  end
 
   # show specific work
   def show
@@ -10,12 +16,6 @@ class WorksController < ApplicationController
 
   # find a work
   def index
-  end
-
-  def create
-  end
-
-  def edit
   end
 
   def update
@@ -27,11 +27,11 @@ class WorksController < ApplicationController
     redirect_to work_path(@work)
   end
 
-  def destroy
+  def jump_sections_html
+    render :partial => "works/jump_sections"
   end
 
-  def jump_sections_html
-    @work = Work.find(params[:id])
+  def download
     render :partial => "works/jump_sections"
   end
 

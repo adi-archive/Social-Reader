@@ -7,6 +7,9 @@ class Ability
       can :manage, :all
     else
       can :read, :all
+      can :jump_sections, Work
+      can :download, Work
+
       # TODO: add permissions to modify annotations once UI is set up
     end
 

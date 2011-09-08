@@ -2,13 +2,15 @@ SocialReader::Application.routes.draw do
 
   match "profiles/:id", :to => "profiles#view", :as => :view_profiles
 
-  resources :authors
+  resources :authors, :only => [:show, :index]
+  resources :translators, :only => [:show, :index]
 
   resources :works do
     resources :sections
   end
 
   get 'works/:id/jump_sections/' => "works#jump_sections_html", :as => :jump_sections
+  get 'works/:id/download/' => "works#download", :as => :download
 
   # get "works/section"
   devise_for :users

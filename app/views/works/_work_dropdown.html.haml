@@ -1,4 +1,4 @@
-%ul{:class => "dropdown"}
-  -#
-    %li{:class => "dropdownOption"} Download
-  %li{:class => "dropdownOption jumpSection", :data => { :work_id => work.id } } Jump to Section
+%ul{:class => "dropdown", :data => { :work_permalink => work.permalink } }
+  %li{:class => "dropdownOption jumpSection" } Jump to Section
+  %li{:class => "dropdownOption download"} Download
+

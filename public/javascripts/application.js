@@ -75,12 +75,23 @@ $(function() {
   })();
 
   (function addWorkDropdownListeners() {
+
+    var getPermalink = function(node) {
+      return node.closest('.dropdown').data('work_permalink');
+    };
+
     $('.jumpSection').click(function(e) {
-      $.get('/works/' + $(this).data('work_id') + '/jump_sections', {},
+      $.get('/works/' + getPermalink($(this)) + '/jump_sections', {},
           function(data) {
         sr.setOverlay(data);
       });
     });
+
+    $('.download').click(function(e) {
+      var permalink = $(this).closest('.dropdown').data('work_permalink')
+      window.open('/works/' + getPermalink($(this)) + '/download');
+    });
+
   })();
 
   (function initializeOverlay() {
@@ -93,13 +104,13 @@ $(function() {
     var overlay = $('#overlay'),
         overlayContent = $('#overlayContent');
     overlayContent.html(newHtml);
-    overlay.show();
+    overlay.fadeIn('fast');
   };
 
   // Optionally pass in overlay
   sr.hideOverlay = function(overlay) {
     overlay = overlay || $('#overlay');
-    overlay.hide();
+    overlay.fadeOut('fast');
   }
 
 });

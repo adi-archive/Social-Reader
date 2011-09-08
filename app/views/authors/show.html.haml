@@ -1,7 +1,8 @@
 .pageHeading
   %h1{:class => "pageName"} #{@author}
 %h2 Works
-- if current_user.try(:admin?) # try so we fail gracefully if logged out
+-#
+  - if current_user.try(:admin?) # try so we fail gracefully if logged out
   = link_to('[edit]', edit_author_path(@author), {:class => 'editLink'})
 %ul
   - @author.works.each do |work|

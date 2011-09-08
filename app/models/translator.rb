@@ -1,4 +1,3 @@
-class Author < Writer
+class Translator < Writer
   include Mongoid::Document
-
 end

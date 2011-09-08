@@ -6,6 +6,7 @@ class Section
   field :form, :type => String
   field :raw_text, :type => String
   field :summary, :type => String
+  field :permalink, :type => String
 
   embeds_many :lines, :dependent => :destroy
   has_many :annotations, :dependent => :destroy
@@ -21,6 +22,13 @@ class Section
 
   VERSE = 'verse'
   PROSE = 'prose'
+
+  before_save do
+    self.permalink = Permalink.generate_permalink(
+        lambda { |permalink| Section.find_by_permalink(self.work_id, permalink) },
+        self.position)
+  end
+
   before_save do
 =begin
     if form == VERSE
@@ -57,4 +65,13 @@ class Section
   def to_s
     return name
   end
+
+  def to_param
+    permalink
+  end
+
+  def self.find_by_permalink(work_id, permalink)
+    Section.where({ :permalink =>  permalink, :work_id => work_id }).first
+  end
+
 end

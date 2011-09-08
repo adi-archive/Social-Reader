@@ -1,25 +1,15 @@
 class AuthorsController < ApplicationController
 
-  load_and_authorize_resource
+  before_filter :get_work
 
-  # show specific work
+  def get_work
+    @author = Author.find_by_permalink(params[:id])
+  end
+
   def show
   end
 
-  # find a work
   def index
-  end
-
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
 end
