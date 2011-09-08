@@ -325,11 +325,18 @@ $landing-right-width: 50%;
   margin-right: 30px;
 }
 
-// sectionContent and sectionAnnotations widths add up to 100% - then the margin
-// between them (regardless of the size of the window) is equal to the
-// negative margin-right of the section Annotations.
 #sectionContent {
+  // sectionContent and sectionAnnotations widths add up to 100% - then the margin
+  // between them (regardless of the size of the window) is equal to the
+  // negative margin-right of the section Annotations.
   width: 65%;
+}
+
+#sectionText {
+  margin-left: -$main-left-right-margin;
+  padding-left: $main-left-right-margin;
+  margin-right: -$main-left-right-margin;
+  padding-right: $main-left-right-margin;
 }
 
 #sectionAnnotations {

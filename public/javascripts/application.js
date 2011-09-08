@@ -38,10 +38,8 @@ $(function() {
   })();
 
   // Triggers highlight eventson the body text.
-  /*
   (function addHighlightEventTrigger() {
-    var sectionText = $('#sectionText');
-    $(document.body).mouseup(function() {
+    $("#sectionText").mouseup(function() {
       var txt = '';
       if (window.getSelection) {
         txt = window.getSelection();
@@ -52,16 +50,9 @@ $(function() {
         txt.toString = function() { return this.text };
         txt.toHtml = function() { return this.htmlText };
       }
-      console.log(sectionText.text());
       console.log(txt.toString());
-      if (txt && sectionText.text().replace("\n", " ").indexOf(txt.toString().replace("\n", " ")) !== -1) {
-        console.log('achievement unlocked');
-      } else {
-        console.log('bitch, please');
-      }
     });
   })();
-  */
 
   (function addDropdownListeners() {
     $('.dropdownButtonArrowContainer').hover(function(e) {
