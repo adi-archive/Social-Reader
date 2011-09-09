@@ -360,6 +360,16 @@ $landing-right-width: 50%;
     position: fixed;
     padding: 0 10px;
   }
+
+  #newCommentForm {
+    width: 26.5%;
+    padding: 0 10px;
+  }
+
+}
+
+#newCommentForm {
+  display: none;
 }
 
 #landingPoints {
@@ -555,6 +565,8 @@ $dropdown-arrow-container-width: 25px;
 .annotationContent {
   background-color: $annotation-content-background-color;
   padding: $annotation-content-top-bottom-padding $annotation-left-right-padding;
+  border-left: 1px solid $annotation-title-background-color;
+  border-right: 1px solid $annotation-title-background-color;
 }
 
 .annotationBottom {
@@ -589,8 +601,12 @@ $dropdown-arrow-container-width: 25px;
   }
 }
 
-.verseLine {
-  padding-bottom: 10px;
+.line {
+  margin-bottom: 10px;
+}
+
+.marker {
+  background: yellow;
 }
 
 footer {

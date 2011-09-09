@@ -617,29 +617,39 @@ form div {
   position: fixed;
   padding: 0 10px;
 }
+/* line 364, ../../app/stylesheets/partials/_page.scss */
+#sectionAnnotationsContent #newCommentForm {
+  width: 26.5%;
+  padding: 0 10px;
+}
 
-/* line 365, ../../app/stylesheets/partials/_page.scss */
+/* line 371, ../../app/stylesheets/partials/_page.scss */
+#newCommentForm {
+  display: none;
+}
+
+/* line 375, ../../app/stylesheets/partials/_page.scss */
 #landingPoints {
   padding-left: 20px;
 }
 
-/* line 369, ../../app/stylesheets/partials/_page.scss */
+/* line 379, ../../app/stylesheets/partials/_page.scss */
 #landingPointsHeader {
   padding-bottom: 0;
 }
 
-/* line 373, ../../app/stylesheets/partials/_page.scss */
+/* line 383, ../../app/stylesheets/partials/_page.scss */
 #landingPoints li {
   padding-bottom: 2px 0;
   list-style: disc;
 }
 
-/* line 381, ../../app/stylesheets/partials/_page.scss */
+/* line 391, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton {
   width: 83px;
   position: relative;
 }
-/* line 384, ../../app/stylesheets/partials/_page.scss */
+/* line 394, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonArrowContainer {
   float: right;
   border-top-left-radius: 0;
@@ -648,13 +658,13 @@ form div {
   padding: 0;
   height: 26px;
 }
-/* line 391, ../../app/stylesheets/partials/_page.scss */
+/* line 401, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonArrowContainer .dropdownButtonArrow {
   margin-top: 5.5px;
   display: inline-block;
   font-size: 15px;
 }
-/* line 397, ../../app/stylesheets/partials/_page.scss */
+/* line 407, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown {
   position: absolute;
   left: 58px;
@@ -686,13 +696,13 @@ form div {
   background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
   background-image: linear-gradient(top, #7fbf4d, #63a62f);
 }
-/* line 411, ../../app/stylesheets/partials/_page.scss */
+/* line 421, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption {
   color: white;
   padding: 5px 0 5px 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 415, ../../app/stylesheets/partials/_page.scss */
+/* line 425, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
@@ -706,7 +716,7 @@ form div {
   box-shadow: inset 0 1px 0 0 #8dbf67;
   cursor: pointer;
 }
-/* line 420, ../../app/stylesheets/partials/_page.scss */
+/* line 430, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption:active {
   border: 1px solid #5b992b;
   border-bottom: 1px solid #538c27;
@@ -715,123 +725,123 @@ form div {
   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
 }
-/* line 427, ../../app/stylesheets/partials/_page.scss */
+/* line 437, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption:last-child {
   border-bottom: none;
 }
-/* line 432, ../../app/stylesheets/partials/_page.scss */
+/* line 442, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonText {
   width: 80px;
 }
 
-/* line 437, ../../app/stylesheets/partials/_page.scss */
+/* line 447, ../../app/stylesheets/partials/_page.scss */
 .pageHeading {
   margin-bottom: 20px;
 }
 
-/* line 441, ../../app/stylesheets/partials/_page.scss */
+/* line 451, ../../app/stylesheets/partials/_page.scss */
 .pane {
   background: #e7f7dc;
 }
-/* line 443, ../../app/stylesheets/partials/_page.scss */
+/* line 453, ../../app/stylesheets/partials/_page.scss */
 .pane:hover {
   background: #e8ffd9;
 }
 
-/* line 449, ../../app/stylesheets/partials/_page.scss */
+/* line 459, ../../app/stylesheets/partials/_page.scss */
 .twoColumn .left {
   display: inline-block;
   padding-right: 30px;
 }
-/* line 453, ../../app/stylesheets/partials/_page.scss */
+/* line 463, ../../app/stylesheets/partials/_page.scss */
 .twoColumn .right {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 459, ../../app/stylesheets/partials/_page.scss */
+/* line 469, ../../app/stylesheets/partials/_page.scss */
 .shadowedImage {
   box-shadow: #666 1px 1px 10px;
 }
-/* line 461, ../../app/stylesheets/partials/_page.scss */
+/* line 471, ../../app/stylesheets/partials/_page.scss */
 .shadowedImage:hover {
   box-shadow: black 1px 1px 20px;
 }
 
-/* line 467, ../../app/stylesheets/partials/_page.scss */
+/* line 477, ../../app/stylesheets/partials/_page.scss */
 .workResult .workImage {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 471, ../../app/stylesheets/partials/_page.scss */
+/* line 481, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 475, ../../app/stylesheets/partials/_page.scss */
+/* line 485, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper .workActions {
   position: absolute;
   bottom: 0;
 }
-/* line 478, ../../app/stylesheets/partials/_page.scss */
+/* line 488, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper .workActions .workInfo {
   margin-bottom: 15px;
 }
 
-/* line 486, ../../app/stylesheets/partials/_page.scss */
+/* line 496, ../../app/stylesheets/partials/_page.scss */
 .showWorkLeftNav .workImage {
   height: 200px;
   margin-bottom: 15px;
 }
-/* line 490, ../../app/stylesheets/partials/_page.scss */
+/* line 500, ../../app/stylesheets/partials/_page.scss */
 .showWorkLeftNav .dropdownButton {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 496, ../../app/stylesheets/partials/_page.scss */
+/* line 506, ../../app/stylesheets/partials/_page.scss */
 .workResult.large {
   padding-bottom: 20px;
 }
-/* line 498, ../../app/stylesheets/partials/_page.scss */
+/* line 508, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workImage {
   height: 100px;
 }
-/* line 501, ../../app/stylesheets/partials/_page.scss */
+/* line 511, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper {
   width: 600px;
   height: 100px;
 }
-/* line 504, ../../app/stylesheets/partials/_page.scss */
+/* line 514, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper .workTitle {
   font-size: 20px;
   font-weight: bold;
 }
-/* line 508, ../../app/stylesheets/partials/_page.scss */
+/* line 518, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper .workAuthor {
   font-size: 15px;
 }
 
-/* line 515, ../../app/stylesheets/partials/_page.scss */
+/* line 525, ../../app/stylesheets/partials/_page.scss */
 .workResult.small {
   padding-bottom: 20px;
 }
-/* line 517, ../../app/stylesheets/partials/_page.scss */
+/* line 527, ../../app/stylesheets/partials/_page.scss */
 .workResult.small .workImage {
   height: 100px;
 }
-/* line 520, ../../app/stylesheets/partials/_page.scss */
+/* line 530, ../../app/stylesheets/partials/_page.scss */
 .workResult.small .workActionsWrapper {
   height: 100px;
 }
 
-/* line 525, ../../app/stylesheets/partials/_page.scss */
+/* line 535, ../../app/stylesheets/partials/_page.scss */
 .annotation {
   margin: 15px 10px;
 }
 
-/* line 529, ../../app/stylesheets/partials/_page.scss */
+/* line 539, ../../app/stylesheets/partials/_page.scss */
 .annotationTop {
   -moz-border-radius-topleft: 10px;
   -webkit-border-top-left-radius: 10px;
@@ -853,13 +863,13 @@ form div {
   font-size: 15px;
 }
 
-/* line 540, ../../app/stylesheets/partials/_page.scss */
+/* line 550, ../../app/stylesheets/partials/_page.scss */
 .annotationBody {
   border-left: 1px solid green;
   border-right: 1px solid green;
 }
 
-/* line 545, ../../app/stylesheets/partials/_page.scss */
+/* line 555, ../../app/stylesheets/partials/_page.scss */
 .annotationTitle {
   background-color: green;
   color: white;
@@ -869,13 +879,15 @@ form div {
   padding-right: 10px;
 }
 
-/* line 555, ../../app/stylesheets/partials/_page.scss */
+/* line 565, ../../app/stylesheets/partials/_page.scss */
 .annotationContent {
   background-color: white;
   padding: 5px 10px;
+  border-left: 1px solid green;
+  border-right: 1px solid green;
 }
 
-/* line 560, ../../app/stylesheets/partials/_page.scss */
+/* line 572, ../../app/stylesheets/partials/_page.scss */
 .annotationBottom {
   -moz-border-radius-bottomleft: 10px;
   -webkit-border-bottom-left-radius: 10px;
@@ -896,37 +908,37 @@ form div {
   border-bottom: 1px solid green;
 }
 
-/* line 570, ../../app/stylesheets/partials/_page.scss */
+/* line 582, ../../app/stylesheets/partials/_page.scss */
 .bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* line 576, ../../app/stylesheets/partials/_page.scss */
+/* line 588, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks {
   margin: 10px;
   text-align: center;
 }
-/* line 580, ../../app/stylesheets/partials/_page.scss */
+/* line 592, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .previousSectionLink {
   float: left;
 }
-/* line 583, ../../app/stylesheets/partials/_page.scss */
+/* line 595, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .jumpSection {
   padding: 0 5px;
 }
-/* line 587, ../../app/stylesheets/partials/_page.scss */
+/* line 599, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .nextSectionLink {
   float: right;
 }
 
-/* line 592, ../../app/stylesheets/partials/_page.scss */
-.verseLine {
-  padding-bottom: 10px;
+/* line 604, ../../app/stylesheets/partials/_page.scss */
+.line {
+  margin-bottom: 10px;
 }
 
-/* line 596, ../../app/stylesheets/partials/_page.scss */
+/* line 608, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px 30px;
   padding-top: 0;

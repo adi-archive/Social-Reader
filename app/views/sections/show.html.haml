@@ -6,8 +6,11 @@
         %h2 Welcome to Social Reader!
         %p
           Comments will appear here when you click on a highlighted portion of
-          text. Highlight text to mark important passages or add comments of your
+          text. Or, highlight text to mark important passages or add comments of your
           own!
+      #newCommentForm
+        = render :partial => "annotations/new_form"
+      #comments
       -#TODO - actually get comments here
         = render :partial => "annotations/annotation", :locals => {:title => "Title", :text => "Text"}
         = render :partial => "annotations/annotation", :locals => {:title => "Another title", :text => "More text"}
@@ -18,5 +21,7 @@
       %h1{:class => "pageName"} #{link_to(@work, work_path(@work))} #{get_byline(@work)} - #{@section}
     #sectionText
       - @section.lines.each do |line|
-        %div{:class => "line #{@section.form}Line", |
-            :data => {:num => line.display_number} } #{line}
+        %span{:class => "line line#{line.display_number} #{@section.form}Line", |
+          :data => {:num => line.display_number} } #{line}
+        %br
+        %br

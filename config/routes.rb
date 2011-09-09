@@ -6,7 +6,9 @@ SocialReader::Application.routes.draw do
   resources :translators, :only => [:show, :index]
 
   resources :works do
-    resources :sections
+    resources :sections do
+      resources :annotations
+    end
   end
 
   get 'works/:id/jump_sections/' => "works#jump_sections_html", :as => :jump_sections
