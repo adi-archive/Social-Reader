@@ -47,14 +47,18 @@ $(function() {
         // this point.
         setTimeout(function() {
           function getRangeObject(selectionObject) {
-            if (selectionObject.getRangeAt) {
-              return selectionObject.collapsed ?
-                  null : selectionObject.getRangeAt(0);
-            } else { // Safari!
-              var range = document.createRange();
-              range.setStart(selectionObject.anchorNode,selectionObject.anchorOffset);
-              range.setEnd(selectionObject.focusNode,selectionObject.focusOffset);
-              return range;
+            if(selectionObject && $.trim(selectionObject.toString())) {
+              if (selectionObject.getRangeAt) {
+                return selectionObject.collapsed ?
+                    null : selectionObject.getRangeAt(0);
+              } else { // Safari!
+                var range = document.createRange();
+                range.setStart(selectionObject.anchorNode,selectionObject.anchorOffset);
+                range.setEnd(selectionObject.focusNode,selectionObject.focusOffset);
+                return range;
+              }
+            } else {
+              return null;
             }
           }
 
@@ -66,11 +70,16 @@ $(function() {
           }
 
           var rangeObject = getRangeObject(userSelection);
-          if (rangeObject) {
+          var contents = rangeObject && $(rangeObject.extractContents());
+          if (contents) {
+            // Hide existing markers.
+            $('.marker').removeClass('marker');
             var wrapper = $('<span class="marker"></span>')
-                .append($(rangeObject.extractContents()))[0];
+                .append(contents)[0];
             rangeObject.insertNode(wrapper);
             sr.panel.displayStartCommentThread();
+          } else {
+            sr.panel.hideComments();
           }
         }, 10);
       });
@@ -117,6 +126,7 @@ $(function() {
 
   sr.panel.hideComments = function() {
     $('#newCommentForm').hide();
+    $('.marker').removeClass('marker');
     $('#sectionAnnotationsIntro').show();
 
   };
