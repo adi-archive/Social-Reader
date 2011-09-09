@@ -939,6 +939,11 @@ form div {
 }
 
 /* line 608, ../../app/stylesheets/partials/_page.scss */
+.marker {
+  background: yellow;
+}
+
+/* line 612, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px 30px;
   padding-top: 0;

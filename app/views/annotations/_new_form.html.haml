@@ -1,0 +1,20 @@
+= form_for(:annotation, :url => work_section_path(@work, @section), :remote => true, :html => {} ) do |f|
+
+  %table
+    %tr
+      %td
+        = f.label :title, "Title"
+      %td
+        = f.text_field :title
+    %tr
+      %td
+        = f.label :comment, "Comment"
+      %td
+        = f.text_area :comment
+    %tr
+      %td
+        = f.label :privacy, "Privacy"
+      %td
+        = f.select :privacy, Annotation::PRIVACY_SETTINGS
+  = f.submit "Add comment!"
+
