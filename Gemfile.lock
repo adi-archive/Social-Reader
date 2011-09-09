@@ -72,6 +72,7 @@ GEM
     i18n (0.5.0)
     jammit (0.6.3)
       yui-compressor (>= 0.9.3)
+    json (1.5.4)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     mail (2.2.19)
@@ -155,6 +156,7 @@ DEPENDENCIES
   heroku
   html5-boilerplate
   jammit
+  json
   mongoid (= 2.0.2)
   mongoid-rspec (= 1.4.2)
   rails (= 3.0.9)

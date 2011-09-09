@@ -3,17 +3,19 @@ class Writer
 
   field :first_name, :type => String
   field :last_name, :type => String
-  field :about, :type => String
-  field :translator, :type => Boolean, :default => false
+  field :blurb, :type => String
+  field :years_lived, :type => String
+  field :wiki_url, :type => String
   field :permalink, :type => String
+  field :writer_image_url, :type => String
 
   has_and_belongs_to_many :works
 
   # Don't check both since authors such as "Homer" don't have
   # non-empty first and last names
-  validate :has_name
+  validate :has_name, :blurb, :years_lived, :wiki_url
 
-  attr_accessible :first_name, :last_name, :about
+  attr_accessible :first_name, :last_name
 
   include Permalink
 

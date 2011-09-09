@@ -12,11 +12,8 @@ class Section
   has_many :annotations, :dependent => :destroy
   belongs_to :work
 
-  validates_presence_of :form
   validate :form_fits_enum
-  validates_presence_of :name
-  validates_presence_of :position
-  validates_presence_of :raw_text
+  validates_presence_of :name, :position, :raw_text, :form
 
   attr_accessible :name, :lines, :position, :raw_text, :form
 
@@ -25,7 +22,9 @@ class Section
 
   before_save do
     self.permalink = Permalink.generate_permalink(
-        lambda { |permalink| Section.find_by_permalink(self.work_id, permalink) },
+        lambda { |permalink|
+          Section.find_by_permalink(self.work_id, permalink)
+        },
         self.position)
   end
 

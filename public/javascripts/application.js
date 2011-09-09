@@ -39,18 +39,20 @@ $(function() {
 
   // Triggers highlight eventson the body text.
   (function addHighlightEventTrigger() {
-    $("#sectionText").mouseup(function() {
-      var txt = '';
-      if (window.getSelection) {
-        txt = window.getSelection();
-      } else if (document.getSelection) {
-        txt = document.getSelection();
-      } else if (document.selection) {
-        txt = document.selection.createRange();
-        txt.toString = function() { return this.text };
-        txt.toHtml = function() { return this.htmlText };
-      }
-      console.log(txt.toString());
+    $("#sectionText").mousedown(function() {
+      $("#sectionText").one('mouseup', function() {
+        var txt = '';
+        if (window.getSelection) {
+          txt = window.getSelection();
+        } else if (document.getSelection) {
+          txt = document.getSelection();
+        } else if (document.selection) {
+          txt = document.selection.createRange();
+          txt.toString = function() { return this.text };
+          txt.toHtml = function() { return this.htmlText };
+        }
+        sr.runHighlightDisplay();
+      });
     });
   })();
 
@@ -68,7 +70,9 @@ $(function() {
   (function addWorkDropdownListeners() {
 
     var getPermalink = function(node) {
-      return node.closest('.dropdown').data('work_permalink');
+      var permalink_data_key = 'work_permalink';
+      return node.data(permalink_data_key) ||
+          node.closest('.dropdown').data(permalink_data_key)
     };
 
     $('.jumpSection').click(function(e) {
@@ -79,7 +83,6 @@ $(function() {
     });
 
     $('.download').click(function(e) {
-      var permalink = $(this).closest('.dropdown').data('work_permalink')
       window.open('/works/' + getPermalink($(this)) + '/download');
     });
 
@@ -91,18 +94,21 @@ $(function() {
     });
   })();
 
+  sr.runHighlightDisplay = function() {
+  };
+
   sr.setOverlay = function(newHtml) {
     var overlay = $('#overlay'),
         overlayContent = $('#overlayContent');
     overlayContent.html(newHtml);
-    overlay.fadeIn('fast');
+    overlay.show();
   };
 
   // Optionally pass in overlay
   sr.hideOverlay = function(overlay) {
     overlay = overlay || $('#overlay');
-    overlay.fadeOut('fast');
-  }
+    overlay.hide();
+  };
 
 });
 

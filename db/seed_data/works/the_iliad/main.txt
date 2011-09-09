@@ -3,7 +3,6 @@
   "isbn": "0140275363",
   "amazon_url": "http://www.amazon.com/Iliad-Penguin-Classics-Deluxe/dp/0140275363/",
   "authors": [["Homer"]],
-  "section_name_prefix": "Section",
   "form": "verse",
   "course": "LH"
 }

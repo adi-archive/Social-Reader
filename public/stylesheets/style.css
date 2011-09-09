@@ -587,13 +587,17 @@ form div {
 
 /* line 335, ../../app/stylesheets/partials/_page.scss */
 #sectionText {
+  /* This expands the width of the sectionText div, which means that there's a
+   * bigger area for the mouseup listener that is triggered when something is
+   * highlighted.
+   */
   margin-left: -30px;
   padding-left: 30px;
   margin-right: -30px;
   padding-right: 30px;
 }
 
-/* line 342, ../../app/stylesheets/partials/_page.scss */
+/* line 346, ../../app/stylesheets/partials/_page.scss */
 #sectionAnnotations {
   margin-top: -15px;
   margin-right: -30px;
@@ -602,33 +606,40 @@ form div {
   width: 35%;
 }
 
-/* line 350, ../../app/stylesheets/partials/_page.scss */
+/* line 354, ../../app/stylesheets/partials/_page.scss */
 #sectionAnnotationsContent {
-  margin: 10px 10px;
+  margin: 20px 10px;
+  position: relative;
+}
+/* line 358, ../../app/stylesheets/partials/_page.scss */
+#sectionAnnotationsContent #sectionAnnotationsIntro {
+  width: 26.5%;
+  position: fixed;
+  padding: 0 10px;
 }
 
-/* line 354, ../../app/stylesheets/partials/_page.scss */
+/* line 365, ../../app/stylesheets/partials/_page.scss */
 #landingPoints {
   padding-left: 20px;
 }
 
-/* line 358, ../../app/stylesheets/partials/_page.scss */
+/* line 369, ../../app/stylesheets/partials/_page.scss */
 #landingPointsHeader {
   padding-bottom: 0;
 }
 
-/* line 362, ../../app/stylesheets/partials/_page.scss */
+/* line 373, ../../app/stylesheets/partials/_page.scss */
 #landingPoints li {
   padding-bottom: 2px 0;
   list-style: disc;
 }
 
-/* line 370, ../../app/stylesheets/partials/_page.scss */
+/* line 381, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton {
   width: 83px;
   position: relative;
 }
-/* line 373, ../../app/stylesheets/partials/_page.scss */
+/* line 384, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonArrowContainer {
   float: right;
   border-top-left-radius: 0;
@@ -637,13 +648,13 @@ form div {
   padding: 0;
   height: 26px;
 }
-/* line 380, ../../app/stylesheets/partials/_page.scss */
+/* line 391, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonArrowContainer .dropdownButtonArrow {
   margin-top: 5.5px;
   display: inline-block;
   font-size: 15px;
 }
-/* line 386, ../../app/stylesheets/partials/_page.scss */
+/* line 397, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown {
   position: absolute;
   left: 58px;
@@ -675,13 +686,13 @@ form div {
   background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
   background-image: linear-gradient(top, #7fbf4d, #63a62f);
 }
-/* line 400, ../../app/stylesheets/partials/_page.scss */
+/* line 411, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption {
   color: white;
   padding: 5px 0 5px 8px;
   border-bottom: 1px solid #ddd;
 }
-/* line 404, ../../app/stylesheets/partials/_page.scss */
+/* line 415, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
@@ -695,7 +706,7 @@ form div {
   box-shadow: inset 0 1px 0 0 #8dbf67;
   cursor: pointer;
 }
-/* line 409, ../../app/stylesheets/partials/_page.scss */
+/* line 420, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption:active {
   border: 1px solid #5b992b;
   border-bottom: 1px solid #538c27;
@@ -704,123 +715,123 @@ form div {
   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
 }
-/* line 416, ../../app/stylesheets/partials/_page.scss */
+/* line 427, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdown .dropdownOption:last-child {
   border-bottom: none;
 }
-/* line 421, ../../app/stylesheets/partials/_page.scss */
+/* line 432, ../../app/stylesheets/partials/_page.scss */
 .dropdownButton .dropdownButtonText {
   width: 80px;
 }
 
-/* line 426, ../../app/stylesheets/partials/_page.scss */
+/* line 437, ../../app/stylesheets/partials/_page.scss */
 .pageHeading {
   margin-bottom: 20px;
 }
 
-/* line 430, ../../app/stylesheets/partials/_page.scss */
+/* line 441, ../../app/stylesheets/partials/_page.scss */
 .pane {
   background: #e7f7dc;
 }
-/* line 432, ../../app/stylesheets/partials/_page.scss */
+/* line 443, ../../app/stylesheets/partials/_page.scss */
 .pane:hover {
   background: #e8ffd9;
 }
 
-/* line 438, ../../app/stylesheets/partials/_page.scss */
+/* line 449, ../../app/stylesheets/partials/_page.scss */
 .twoColumn .left {
   display: inline-block;
   padding-right: 30px;
 }
-/* line 442, ../../app/stylesheets/partials/_page.scss */
+/* line 453, ../../app/stylesheets/partials/_page.scss */
 .twoColumn .right {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 448, ../../app/stylesheets/partials/_page.scss */
+/* line 459, ../../app/stylesheets/partials/_page.scss */
 .shadowedImage {
   box-shadow: #666 1px 1px 10px;
 }
-/* line 450, ../../app/stylesheets/partials/_page.scss */
+/* line 461, ../../app/stylesheets/partials/_page.scss */
 .shadowedImage:hover {
   box-shadow: black 1px 1px 20px;
 }
 
-/* line 456, ../../app/stylesheets/partials/_page.scss */
+/* line 467, ../../app/stylesheets/partials/_page.scss */
 .workResult .workImage {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 460, ../../app/stylesheets/partials/_page.scss */
+/* line 471, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-/* line 464, ../../app/stylesheets/partials/_page.scss */
+/* line 475, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper .workActions {
   position: absolute;
   bottom: 0;
 }
-/* line 467, ../../app/stylesheets/partials/_page.scss */
+/* line 478, ../../app/stylesheets/partials/_page.scss */
 .workResult .workActionsWrapper .workActions .workInfo {
   margin-bottom: 15px;
 }
 
-/* line 475, ../../app/stylesheets/partials/_page.scss */
+/* line 486, ../../app/stylesheets/partials/_page.scss */
 .showWorkLeftNav .workImage {
   height: 200px;
   margin-bottom: 15px;
 }
-/* line 479, ../../app/stylesheets/partials/_page.scss */
+/* line 490, ../../app/stylesheets/partials/_page.scss */
 .showWorkLeftNav .dropdownButton {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 485, ../../app/stylesheets/partials/_page.scss */
+/* line 496, ../../app/stylesheets/partials/_page.scss */
 .workResult.large {
   padding-bottom: 20px;
 }
-/* line 487, ../../app/stylesheets/partials/_page.scss */
+/* line 498, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workImage {
   height: 100px;
 }
-/* line 490, ../../app/stylesheets/partials/_page.scss */
+/* line 501, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper {
   width: 600px;
   height: 100px;
 }
-/* line 493, ../../app/stylesheets/partials/_page.scss */
+/* line 504, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper .workTitle {
   font-size: 20px;
   font-weight: bold;
 }
-/* line 497, ../../app/stylesheets/partials/_page.scss */
+/* line 508, ../../app/stylesheets/partials/_page.scss */
 .workResult.large .workActionsWrapper .workAuthor {
   font-size: 15px;
 }
 
-/* line 504, ../../app/stylesheets/partials/_page.scss */
+/* line 515, ../../app/stylesheets/partials/_page.scss */
 .workResult.small {
   padding-bottom: 20px;
 }
-/* line 506, ../../app/stylesheets/partials/_page.scss */
+/* line 517, ../../app/stylesheets/partials/_page.scss */
 .workResult.small .workImage {
   height: 100px;
 }
-/* line 509, ../../app/stylesheets/partials/_page.scss */
+/* line 520, ../../app/stylesheets/partials/_page.scss */
 .workResult.small .workActionsWrapper {
   height: 100px;
 }
 
-/* line 514, ../../app/stylesheets/partials/_page.scss */
+/* line 525, ../../app/stylesheets/partials/_page.scss */
 .annotation {
   margin: 15px 10px;
 }
 
-/* line 518, ../../app/stylesheets/partials/_page.scss */
+/* line 529, ../../app/stylesheets/partials/_page.scss */
 .annotationTop {
   -moz-border-radius-topleft: 10px;
   -webkit-border-top-left-radius: 10px;
@@ -842,13 +853,13 @@ form div {
   font-size: 15px;
 }
 
-/* line 529, ../../app/stylesheets/partials/_page.scss */
+/* line 540, ../../app/stylesheets/partials/_page.scss */
 .annotationBody {
   border-left: 1px solid green;
   border-right: 1px solid green;
 }
 
-/* line 534, ../../app/stylesheets/partials/_page.scss */
+/* line 545, ../../app/stylesheets/partials/_page.scss */
 .annotationTitle {
   background-color: green;
   color: white;
@@ -858,13 +869,13 @@ form div {
   padding-right: 10px;
 }
 
-/* line 544, ../../app/stylesheets/partials/_page.scss */
+/* line 555, ../../app/stylesheets/partials/_page.scss */
 .annotationContent {
   background-color: white;
   padding: 5px 10px;
 }
 
-/* line 549, ../../app/stylesheets/partials/_page.scss */
+/* line 560, ../../app/stylesheets/partials/_page.scss */
 .annotationBottom {
   -moz-border-radius-bottomleft: 10px;
   -webkit-border-bottom-left-radius: 10px;
@@ -885,37 +896,37 @@ form div {
   border-bottom: 1px solid green;
 }
 
-/* line 559, ../../app/stylesheets/partials/_page.scss */
+/* line 570, ../../app/stylesheets/partials/_page.scss */
 .bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* line 565, ../../app/stylesheets/partials/_page.scss */
+/* line 576, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks {
   margin: 10px;
   text-align: center;
 }
-/* line 569, ../../app/stylesheets/partials/_page.scss */
+/* line 580, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .previousSectionLink {
   float: left;
 }
-/* line 572, ../../app/stylesheets/partials/_page.scss */
+/* line 583, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .jumpSection {
   padding: 0 5px;
 }
-/* line 576, ../../app/stylesheets/partials/_page.scss */
+/* line 587, ../../app/stylesheets/partials/_page.scss */
 .sectionNavLinks .nextSectionLink {
   float: right;
 }
 
-/* line 581, ../../app/stylesheets/partials/_page.scss */
+/* line 592, ../../app/stylesheets/partials/_page.scss */
 .verseLine {
   padding-bottom: 10px;
 }
 
-/* line 585, ../../app/stylesheets/partials/_page.scss */
+/* line 596, ../../app/stylesheets/partials/_page.scss */
 footer {
   padding: 20px 30px;
   padding-top: 0;

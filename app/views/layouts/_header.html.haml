@@ -1,6 +1,7 @@
 %div{:class => "logo"}
   %a{:href => root_path}SocialReader
 %nav
+  %a{:href => root_path} Home
   %a{:href => works_path} Find Books
   - if current_user
     %a{:href => view_profiles_path(current_user)} Your Profile

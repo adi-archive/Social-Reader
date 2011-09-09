@@ -2,10 +2,15 @@ class Work
   include Mongoid::Document
 
   field :title, :type => String
-  field :isbn, :type => String
-  field :amazon_url, :type => String
-  field :year
+  field :publication_year, :type => String
   field :cover_image_url, :type => String
+  field :loc_class, :type => String
+
+  field :course, :type => String
+  field :course_index, :type => Integer
+
+  field :wiki_url, :type => String
+
   field :permalink, :type => String
 
   has_many :sections, :dependent => :destroy
@@ -13,7 +18,8 @@ class Work
   has_and_belongs_to_many :authors
   has_and_belongs_to_many :translators
 
-  validates_presence_of :title
+  validate :course_and_course_id
+  validates_presence_of :title, :publication_year, :cover_image_url
   validates_uniqueness_of :isbn
 
   attr_accessible :title, :isbn, :amazon_url, :year, :cover_image_url
@@ -24,6 +30,11 @@ class Work
     self.permalink = Permalink.generate_permalink(
         lambda { |permalink| Work.find_by_permalink(permalink) },
         Permalink.to_permalink(self.title))
+  end
+
+  def course_and_course_id
+    # Either both must be present or neither should
+    !!self.course == !!self.course_id
   end
 
   def to_s

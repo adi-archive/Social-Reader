@@ -2,6 +2,12 @@
   #sectionAnnotations.pane
     = render :partial => "sections/section_nav_links"
     #sectionAnnotationsContent
+      #sectionAnnotationsIntro
+        %h2 Welcome to Social Reader!
+        %p
+          Comments will appear here when you click on a highlighted portion of
+          text. Highlight text to mark important passages or add comments of your
+          own!
       -#TODO - actually get comments here
         = render :partial => "annotations/annotation", :locals => {:title => "Title", :text => "Text"}
         = render :partial => "annotations/annotation", :locals => {:title => "Another title", :text => "More text"}
@@ -12,10 +18,5 @@
       %h1{:class => "pageName"} #{link_to(@work, work_path(@work))} #{get_byline(@work)} - #{@section}
     #sectionText
       - @section.lines.each do |line|
-        - if @section.form == "verse"
-          -# TODO: convert to constant
-          %div{:class => "verseLine"}
-            #{line}
-        - else #prose
-          %div{:class => "proseLine"}
-            #{line}
+        %div{:class => "line #{@section.form}Line", |
+            :data => {:num => line.display_number} } #{line}

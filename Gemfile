@@ -21,6 +21,8 @@ gem "heroku"
 
 gem "jammit"
 
+gem "json"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

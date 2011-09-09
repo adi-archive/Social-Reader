@@ -333,6 +333,10 @@ $landing-right-width: 50%;
 }
 
 #sectionText {
+  /* This expands the width of the sectionText div, which means that there's a
+   * bigger area for the mouseup listener that is triggered when something is
+   * highlighted.
+   */
   margin-left: -$main-left-right-margin;
   padding-left: $main-left-right-margin;
   margin-right: -$main-left-right-margin;
@@ -348,7 +352,14 @@ $landing-right-width: 50%;
 }
 
 #sectionAnnotationsContent {
-  margin: 10px 10px;
+  margin: 20px 10px;
+  position: relative;
+
+  #sectionAnnotationsIntro {
+    width: 26.5%;
+    position: fixed;
+    padding: 0 10px;
+  }
 }
 
 #landingPoints {
